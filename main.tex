@@ -1,0 +1,182 @@
+\documentclass[letterpaper,12pt,openright,notitlepage]{report}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+
+\usepackage{fancyref}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{braket}
+\usepackage{color}
+\usepackage{array}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage[ampersand]{easylist}
+
+\usepackage{xcolor}
+\usepackage{sectsty}
+\chapterfont{\color{blue}}
+\sectionfont{\color{cyan}}
+
+\usepackage[bold]{hhtensor}
+\usepackage{setspace}
+
+\usepackage[small]{caption}
+\setlength{\captionmargin}{20pt}
+
+\renewcommand*\thesection{\arabic{section}}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{booktabs}
+
+\newcommand{\tab}{\hspace{1cm}}
+\definecolor{lightblue}{rgb}{0.45,0.45,0.95}
+\definecolor{darkblue}{rgb}{0.12,0.15,0.49}
+% Hyperlink options
+\usepackage[letterpaper,linktocpage]{hyperref}
+\hypersetup{colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=darkblue,          % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	urlcolor=black,
+	bookmarksnumbered=true,
+	pdffitwindow=true, 
+	%bookmarks=true,
+    pdftitle={Relatorio parcial cpg},
+    pdfauthor={Jorge H. Soares}
+    }    
+    
+\setlength{\oddsidemargin}{0pt}
+\setlength{\topmargin}{20pt}
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{25pt}
+\setlength{\textheight}{609pt}
+\setlength{\textwidth}{455pt}
+\setlength{\marginparsep}{35pt}
+\setlength{\marginparwidth}{35pt}
+\setlength{\footskip}{30pt}
+\setlength{\hoffset}{0pt}
+\setlength{\voffset}{0pt}
+\setlength{\paperwidth}{597pt}
+\setlength{\paperheight}{845pt}
+
+\usepackage{fancyhdr}
+\lhead{\leftmark}
+\rhead{\thepage}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\pagestyle{fancy}
+\usepackage{calc}     
+    
+\newcommand{\diff}[2]{\dfrac{d #1}{d #2}} %derivada
+\newcommand{\n}{\text{n}}
+\newcommand{\ddiff}[2]{\dfrac{d^2 #1}{d^2 #2}} %derivada segunda
+\newcommand{\pdiff}[2]{\dfrac{\partial #1}{\partial #2}} %derivada parcial
+\newcommand{\pddiff}[2]{\dfrac{\partial^2 #1}{\partial^2 #2}} %segunda derivada parcial
+\newcommand{\dvol}{dV} %elemento de volume
+\newcommand{\dsurf}{dA} %elemento de superficie
+\DeclareMathOperator{\sen}{sen}
+\newcommand{\dg}{$^\text{o}$}
+\newcommand{\regmark}{\textsuperscript{\textregistered}}   
+
+\definecolor{NewBlue}{rgb}{0,0,0.4}
+\definecolor{RoyalBlue}{rgb}{0,0,0.6}
+
+%\usepackage{secdot} 
+\usepackage{sectsty}
+\chapternumberfont{\color{NewBlue}\Huge} 
+\chaptertitlefont{\color{NewBlue}\Huge}
+\sectionfont{\color{RoyalBlue}\large}
+\subsectionfont{\color{RoyalBlue}\large}
+\subsubsectionfont{\color{RoyalBlue}\small}
+
+\newcommand{\gom}{g_\text{OM}}
+\newcommand{\ml}{Matlab\textsuperscript{\textregistered} }
+\newcommand{\cm}{Comsol\textsuperscript{\textregistered} }
+\newcommand{\llink}{LiveLink\textsuperscript{\textregistered} }
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\usepackage{xspace}
+\newcommand{\etc} {etc.\xspace}
+\newcommand{\eg} {e.\,g.\xspace}
+\newcommand{\ie} {i.\,e.\xspace}
+\newcommand{\regist}{\textsuperscript{\textregistered}}
+\newcommand{\trdmrk}{\textsuperscript{\texttrademark}}
+\newcommand{\sinn}{Si$_3$N$_4$\text{ }}
+\newcommand{\sio}{SiO$_2$\text{ }}
+\newcommand{\comsol}{COMSOL\regist}
+\newcommand{\livelink}{LiveLink\regist}
+\newcommand{\matlab}{MatLab\regist}
+\newcommand{\susce}[1]{\chi^{( #1)}}
+\DeclareMathOperator{\RE}{\text{Re}}
+\DeclareMathOperator{\IM}{\text{Im}}
+
+\providecommand{\boldsymbol}[1]{\mbox{\boldmath $#1$}}
+\graphicspath{{figuras/}}
+
+\numberwithin{equation}{chapter}
+\numberwithin{figure}{chapter}
+
+
+
+\begin{document}
+
+\def\figurename{Fig.}
+\def\tablename{Tab.}
+
+\include{dis_jhs_face}
+
+%\def\contentsname{Sumário}
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+\include{dis_jhs_cap1}
+\include{dis_jhs_cap2}
+\include{dis_jhs_cap3}
+\include{dis_jhs_cap4}
+\include{dis_jhs_cap5}
+\include{dis_jhs_cap6}
+\include{dis_jhs_conc}
+
+\addcontentsline{toc}{chapter}{Referênciasbibliográficas}
+\spacing{1.15}
+{\footnotesize
+%\bibliographystyle{unsrt_short}    %% numero
+%\bibliography{relatorio_cpg}
+}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    

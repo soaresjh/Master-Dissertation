@@ -1,0 +1,126 @@
+\chapter{Optical Microcavity}
+%Descrição teórica do caso geral. O objetivo aqui é deixa claro o conceito de modos, modo azimutal, dispersão da cavidade, autovalor e autovetor. Assim, quando eu falar sobre os modos acoplados a ideia de perturbação no autoestado fica mais facil de entender. 
+%
+%Talvez uma descrição mais detalhada sobre a fase acumulada ajude na hora de falar sobre o phase matching, por outro lado pode ser uma descrição fundamental demais. 
+%
+%Também faz parte dessa sessão o experimento de caracterização. Acho que não tem muita necessidade de entrar em detalhes aqui e, se for o caso, podemos aproveitar o apêndice para informações mais técnicas (como fabricação do taper por exemplo). 
+
+As seen in last Chapter, nonlinear phenomena demand high electric fields when compared with the atomic electric field. Just in order to compare, a silicon atom (note that I used a silicon atom as example just to to simplify the atomic model, my cavities aren't build in silicon) has a atomic radius ($\rho_0$) of about $210$~pm and the atomic number of 14, with enable us to estimate   
+\begin{equation}
+   E_\text{atomic} = -\frac{1}{4 \pi \epsilon0}\frac{Z e^-}{\rho_0^2} %\approx 1.4\times10^{-9}\frac{Z}{\rho_0^2} 
+    \approx 4.5\times10^{11}\text{V/m}.
+\end{equation}
+
+The approach we applied in order to reach some comparable electric field is confine it in a optical cavity. By recycle the photons trapped inside and confine they in a small space, the optical cavity enable to reach a high circulating power in a small effective area, lead to a high intensity hence high electric field. 
+
+A typical optical mode, for a Whispering Gallery Mode (don't worry, it will be clear further) cavity with about $100~\mu$m of radius, presents a effective area ($A$) of around $2~\mu$m and enable circulating power ($P$) as high as $1$~KW. We can estimate the electric field confined in a silicon cavity (just to compare) as 
+\begin{equation}
+    E_\text{confined} = \sqrt{\frac{2}{c\text{n}\epsilon_0}\frac{P}{A}} \approx 3 \times 10^8\text{V/m}.
+\end{equation}
+Where $\text{n}$ is the refraction index for silicon. 
+
+Lets first introduce the theory for uncoupled modes, where I describe the behavior of any single mode of the cavity. Them we consider the nonlinearity of the medium to describe the coupled mode theory. 
+
+\section{Single Mode Theory}
+
+Considering a slowly varying envelop for the electromagnetic field, it is possible to write they as separable time and space function
+\begin{equation}
+    \genfrac{}{}{0 pt}{}{\vec{E}(\vec{r},t)}{\vec{H}(\vec{r},t)} = \sum_j a_j(t)\genfrac{(}{)}{0 pt}{}{\vec{e}_j(\vec{r})}{\vec{h}_j(\vec{r})}.
+    \label{eq:general_mode}
+\end{equation}
+Each pair ($\vec{e_j},\vec{h_j}$) describe the spatial distribution of the $j$th unperturbed harmonic mode of frequency $\omega_j$, hence 
+
+\begin{equation}
+    \nabla \times \genfrac{(}{)}{0 pt}{}{\vec{e}_j(\vec{r})}{\vec{h}_j(\vec{r})} = i\omega_j \genfrac{(}{)}{0 pt}{}{\mu_0\vec{h}_j(\vec{r})}{-\n^2\epsilon_0\vec{e}_j(\vec{r})}.
+    \label{eq:spatial_distribution}
+\end{equation}
+
+Applying the Eq~\ref{eq:general_mode} and Eq~\ref{eq:spatial_distribution} in the Maxwell's equations, Eq~\ref{eq:max_eq}c and Eq~\ref{eq:max_eq}d, we get
+
+\begin{subequations}
+    \begin{alignat}{2}
+        &\sum_j \left(\dot{a}_j + i \omega_j a\right) \mu_0 \vec{h}_j &&= 0,\\
+        &\sum_j \left(\dot{a}_j + i \omega_j a\right) \text{n}^2\epsilon_0 \vec{e}_j &&= -\frac{\partial}{\partial t}\vec{P}^{NL}.
+    \end{alignat}
+\end{subequations}
+
+Calculating the expectation, borrowing Dirac's notation, normalized by the energy stored in each mode, we them have 
+\begin{equation}
+    \dot{a}_j + i \omega_j a = -\frac{\braket{\vec{e}_j|\partial_t\vec{P}^{NL}}}{2\epsilon_0\bra{\vec{e}_j}\text{n}^2\ket{\vec{e}_j}}.
+    \label{eq:rate_equation_1}
+\end{equation}
+%(\bra{\vec{h}}\mu_0\ket{\vec{h}}+\bra{\vec{e}_j}\epsilon_0\text{n}^2\ket{\vec{e}_j})
+%For solve the equations one must solve it therm by therm, which lead us to the rate equation for the amplitude of the $j$th mode
+%\begin{equation}
+%    \dot{a}_j + i \omega_j a = 0.
+%    \label{eq:rate_equation_1}
+%\end{equation}
+%wheres we normalized in suck way that $|a_j|^2$ give the total energy stored in the $j$th mode.
+
+In order to compare our model with a real system, we shall introduce losses and source, as long some know phenomena, in Eq~\ref{eq:rate_equation_1}; We going to do both phenomenologically.
+
+Including a non-vanishing imaginary part for the permittivity $\epsilon$. Moreover, a source can be included as a combination in current and charge densities in Maxwell's equations, which is analogous to include a polarization term, $\vec{P}_{in}$, to the total polarization. The time dependence of $\vec{P}_{in}$ has to do only with the source, being independent of the intracavity fields.
+
+This step introduce some extra terms in the Eq~\ref{eq:rate_equation_1}, which results
+\begin{equation}
+    \dot{a}_j = -\left(i\omega_j +\frac{\kappa_j}{2}\right)a_j -\frac{\braket{\vec{e}_j|\partial_t\vec{P}^{NL}}}{2\epsilon_0\bra{\vec{e}_j}\text{n}^2\ket{\vec{e}_j}}+\frac{\braket{\vec{e}_j|\partial_t\vec{P}_{in}}}{\bra{\vec{e}_j}\text{n}^2\ket{\vec{e}_j}}.
+\end{equation}
+Wheres $\kappa_j = \kappa^{(i)}_j+\kappa^{(e)}_j$ are the total loss, composed by the intrinsic loss, suck material absorption and scattering loss, and couple loss due to coupling with the source. 
+
+Finally, from input-output theory, it can be show that the feeding term can be written as $\sqrt{\kappa^{(e)}_j}a_{in}(t)$, where $|a_{in}|^2$ gives the pump power. Beside that, for our first analysis, we will consider that the nonlinear therm is small enough to be disregarded. Therefore, the rate equation can be rewrite as 
+\begin{equation}
+    \dot{a}_j = -\left(i\omega_j +\frac{\kappa_j}{2}\right)a_j +\sqrt{\kappa^{(e)}_j}a_{in}(t).
+    \label{eq:rate_equation2}
+\end{equation} 
+
+In typical laboratory condition, $a_{in}(t)$ correspond to a narrow spectral distribution centered at frequency $\omega_L$. Its makes possible to rewrite Eq~\ref{eq:rate_equation2} in a rotating reference frame that turns the source terms into a constant by interchange $a_j \rightarrow a_je^{-i\omega_Lt}$
+\begin{equation}
+    \dot{a}_j = -\left(i\Delta_j +\frac{\kappa_j}{2}\right)a_j +\sqrt{\kappa^{(e)}_j}a_{in}.
+    \label{eq:rate_equation_unperturbed}
+\end{equation}
+where $\Delta_j = \omega_j - \omega_L$ is called the detuning.
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width = 16cm]{Dissertation_rate_equation.jpg}
+    \caption{Caption}
+    \label{fig:rate_equations_single_mode}
+\end{figure}
+A Eq~\ref{eq:rate_equation_unperturbed} accepts harmonic solutions with frequency $\Delta_j$. Nevertheless these solutions decay, with a  $\kappa_j$ rate, into a steady state solution. We usually operates the system in a time scale much larger than $\kappa^{-1}$, thus we consider just the steady state solution. 
+
+We have already introduced the required formalism to describe our problem, now I want you to have a more pictorial, although very useful, view of it. 
+
+Lets consider our system composed by a optical cavity and a source. This cavity have a optical mode with amplitude $a_j$, and present intrinsic loss $\kappa_j^{(i)}$ due scattering and absorption. The source carry a input wave $a_{in}$ at frequency $\omega_L$ which couple with the cavity at an $\kappa_j^{(e)}$ rate, the optical mode couple back with the source at the same frequency, in such way that this couple is seen as a loss channel. The outgoing wave, defined as $S_j$, carry information about the source and the optical mode, in this way
+\begin{equation}
+    S_j = a_{in} - \sqrt{2 \kappa_j^{(e)}}a_j.
+\end{equation}
+For the steady state solution, $\dot{a} = 0$, which lead us to define the transmission of the cavity as
+\begin{equation}
+    T = \left|\frac{S_j}{a_{in}}\right|^2 = \frac{\left(\kappa_j^{(i)} -\kappa_j^{(e)}\right)^2 + (2\Delta_j)^2}{\left(\kappa_j^{(i)} +\kappa_j^{(e)}\right)^2 + (2\Delta_j)^2}.
+    \label{eq:single_mode_transmission}
+\end{equation}
+
+Typically, the experiment are made by sweep the source frequency. The ration between the intrinsic loss and the coupling loss define the regime of the system; under coupled, for $\kappa_e < \kappa_i$, critical coupled, for $\kappa_e = \kappa_i$, and over coupled, for $\kappa_e > \kappa_i$. 
+
+\section{Optical Characterization}
+
+The mainly parameters of relevance to characterize an optical mode is the losses, which is done be measuring the transmission and compare with the Eq~\ref{eq:single_mode_transmission} from the single mode model. 
+
+The experiment is made using the setup showed in the  Fig~\ref{fig:single_mode_charac}a 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 16cm]{figuras/Dissertation_optical_char_exp.jpg}
+    \caption{Caption}
+    \label{fig:single_mode_charac}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+%This approach enable us to develop the time dependent and space dependent part of the problem separately. The subscript $n$ represent the $n$th optical mode of the cavity
