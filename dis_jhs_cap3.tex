@@ -29,7 +29,7 @@ Considering a slowly varying envelop for the electromagnetic field, it is possib
     \genfrac{}{}{0 pt}{}{\vec{E}(\vec{r},t)}{\vec{H}(\vec{r},t)} = \sum_j a_j(t)\genfrac{(}{)}{0 pt}{}{\vec{e}_j(\vec{r})}{\vec{h}_j(\vec{r})}.
     \label{eq:general_mode}
 \end{equation}
-Each pair ($\vec{e_j},\vec{h_j}$) describe the spatial distribution of the $j$th unperturbed harmonic mode of frequency $\omega_j$, hence 
+Each pair ($\vec{e_j},\vec{h_j}$) describe the spatial distribution of the $j$th\footnote{$j$ are a label and can assume any form, not necessary numerical} unperturbed harmonic mode of frequency $\omega_j$, hence 
 
 \begin{equation}
     \nabla \times \genfrac{(}{)}{0 pt}{}{\vec{e}_j(\vec{r})}{\vec{h}_j(\vec{r})} = i\omega_j \genfrac{(}{)}{0 pt}{}{\mu_0\vec{h}_j(\vec{r})}{-\n^2\epsilon_0\vec{e}_j(\vec{r})}.
@@ -116,6 +116,7 @@ As the capacity of recycle photons inside the optical cavity is a important feat
 \begin{equation}
     \mathcal{F} = \frac{\text{Mean Lifetime}}{\text{Round Trip Time}} = \frac{FSR_j}{\kappa_j}.
 \end{equation}
+\nomenclature{$\mathcal{F}$}{Finesse}
 Where $FSR_j$ is the Free Spectral Range of the $j$th mode.
 
 However, for our system this two values (the round trip time and the mean lifetime) are coupled, in the sense that we aren't able to increase or decrease the round trip time without affect the mean lifetime, hence we define the Quality factor ($Q$) as the ration between the frequency of the mode ($\omega_j$) and the bandwidth ($\kappa_j$) to determine the efficiency of our cavity to store energy. 
@@ -145,22 +146,21 @@ We shall assume that the solution is a wave that propagate in $z$ direction with
 \end{subequations}
 Where $\nabla_t^2 = \nabla^2 - \partial^2/\partial z^2$.
 
-It might be have been overlooked, but the Eq~\ref{eq:wave_eq} is a system with 6 equation; one for which field in each coordinate. This set of equation with boundary condition define well our problem. To solve this equations we must apply consideration about symmetry, however we use numerical methods to solve it. We will use the commercial software COMSOL\regmark, in Appendix~\ref{app:Comsol_Solution} we explained step by step how this solutions are done. 
+It might be have been overlooked, but the Eq~\ref{eq:wave_eq} is a system with 6 equation; one for which field in each coordinate. The solution for this set of equation with boundary condition define the optical modes of our problem. To solve this equations we must apply consideration about symmetry, however we use numerical methods to solve it. We will use the commercial software COMSOL\regmark, in Appendix~\ref{app:Comsol_Solution} we explained step by step how this solutions are done. 
 
-Until now we have talk about generic electromagnetic modes, however, to 
+Until now we have talk about generic electromagnetic modes, with no spatial boundary condition, in order to define them we must define the geometry of our cavity. Our device are based in disk microcavities, as show in Fig~%\ref{}
+, this kind of resonator presents the so called Whispering Gallery Modes (WGM), due to cylindrical symmetry. In order to archive high life time of the photons inside the cavity we use a wedge cavity, the angle present at edge makes the electric field to be less perpendicular to the surface leading to lower loss to scattering, moreover the fabrication process have a important role in here, as we shall see below. 
 
-%Due to the symmetry of the problem, is suitable write it in cylindrical coordinates, which enable us to decouple the equation for the $z$ direction, hence
-%
-%\begin{equation}
-%    \frac{1}{r}\pdiff{}{r}\left(r \pdiff{ }{r}\psi\right)+\frac{1}{r^2} \pdiff{^2}{\phi^2}\psi + (\beta^2\text{n}^2-k_j^2)\psi = 0
-%\end{equation}
-%Where $\psi$ can be replaced be the z-component of either electric or magnetic fields. To simplify our notation, til the end spatial treatment I will omit the label $j$ of the field components. 
+The boundary condition lead to the characteristic equation in the form 
+\begin{equation}
+    F(k_r,k_\theta,k_z) = 0.
+\end{equation}
+The set of constants, $k_r,k_\omega,k_z$, that solve this equation define a single mode. As the mode is confined in a region, we can correlate this constants, that can assume any complex value, to integer with spatial representation.
 
+The WGM are labeled in the format TExy and TMxy modes, where x and y are integer correlated with $k_r$ and $k_z$, respectively. Beside that, given a TExy (TMxy) mode it can have several values of $m$, which is a integer correlated with $k_\theta$, it also define the family of the mode. The spatial mean of the constants are show in Fig~%\ref{}
+. Just to clarify the nomenclature adopted in this dissertation, henceforward the term '$j$th mode' are applied for a TExy or TMxy mode with any value of $m$. 
 
-
-
-
-
+Now we have enough knowledge to understand how to experimentally characterize our devices. The following Section will treat this subject. 
 
 \section{Optical Characterization}
 
@@ -177,7 +177,7 @@ The experiment is made using the setup showed in the  Fig~\ref{fig:exp_mode_char
 The result, for a single mode, are presented in the Fig~\ref{fig:exp_mode_charac}b). We use the Eq~\ref{eq:single_mode_transmission} to fit the data giving the values of $300$ MHz and $50$ MHz for the $\kappa_j^{(i)}$ and $\kappa_j^{(e)}$, respectively. The mode are at frequency $\omega_j = 2\pi\times195.25$ THz which give us a $Q \approx 2\times10^6$.
 
 %The same setup are used
-using an stepper motor instead the piezo it possible to modulate the frequency in few THz enabling us to measure different families of modes, as show in Fig~\ref{fig:exp_mode_charac}c).
+Using an stepper motor instead of the piezo it possible to modulate the frequency in few THz enabling us to measure different families of modes, as show in Fig~\ref{fig:exp_mode_charac}c). The spectral distance of a mode in consecutive families give the $FSR_j$ for the $j$ mode. 
 
 
 

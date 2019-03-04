@@ -1,2 +1,9 @@
 \chapter{Appendex}
 \label{app:Comsol_Solution}
+
+Due to the symmetry of the problem, is suitable write it in cylindrical coordinates, which enable us to decouple the equation for the $z$ direction, hence
+
+\begin{equation}
+    \frac{1}{r}\pdiff{}{r}\left(r \pdiff{ }{r}\psi\right)+\frac{1}{r^2} \pdiff{^2}{\phi^2}\psi + (\beta^2\text{n}^2-k_j^2)\psi = 0
+\end{equation}
+Where $\psi$ can be replaced be the z-component of either electric or magnetic fields. To simplify our notation, til the end spatial treatment I will omit the label $j$ of the field components. 
