@@ -17,7 +17,7 @@ A typical optical mode, for a Whispering Gallery Mode (don't worry, it will be c
 \begin{equation}
     E_\text{confined} = \sqrt{\frac{2}{c\text{n}\epsilon_0}\frac{P}{A}} \approx 3 \times 10^8\text{V/m}.
 \end{equation}
-\nomenclature{$c$}{Speed of Light in Vacuum}
+
 Where $\text{n}$ is the refraction index for silicon. 
 
 Lets first introduce the theory for uncoupled modes, where I describe the behavior of any single mode of the cavity. Them we consider the nonlinearity of the medium to describe the coupled mode theory. 
@@ -83,10 +83,7 @@ In typical laboratory condition, $a_{in}(t)$ correspond to a narrow spectral dis
     \dot{a}_j = -\left(i\Delta_j +\frac{\kappa_j}{2}\right)a_j +\sqrt{\kappa^{(e)}_j}a_{in}.
     \label{eq:rate_equation_unperturbed}
 \end{equation}
-\nomenclature{$\kappa$}{Total Cavity Loss}
-\nomenclature{$\kappa^{(i)}$}{Intrinsic Cavity Loss}
-\nomenclature{$\kappa^{(e)}$}{Coupling Cavity Loss}
-\nomenclature{$\Delta$}{Laser Detuning}
+
 
 
 where $\Delta_j = \omega_j - \omega_L$ is called the detuning.
@@ -115,8 +112,9 @@ Typically, the experiment are made by sweep the source frequency. The ration bet
 As the capacity of recycle photons inside the optical cavity is a important feature, we should use a value to determine how efficiently our cavity storage energy. For this purpose we define the Finesse as the ratio between the mean lifetime of the photon inside the cavity and the round trip time, or in function of measurable parameters 
 \begin{equation}
     \mathcal{F} = \frac{\text{Mean Lifetime}}{\text{Round Trip Time}} = \frac{FSR_j}{\kappa_j}.
+    \label{eq:finesse}
 \end{equation}
-\nomenclature{$\mathcal{F}$}{Finesse}
+
 Where $FSR_j$ is the Free Spectral Range of the $j$th mode.
 
 However, for our system this two values (the round trip time and the mean lifetime) are coupled, in the sense that we aren't able to increase or decrease the round trip time without affect the mean lifetime, hence we define the Quality factor ($Q$) as the ration between the frequency of the mode ($\omega_j$) and the bandwidth ($\kappa_j$) to determine the efficiency of our cavity to store energy. 
@@ -176,10 +174,22 @@ The experiment is made using the setup showed in the  Fig~\ref{fig:exp_mode_char
 
 The result, for a single mode, are presented in the Fig~\ref{fig:exp_mode_charac}b). We use the Eq~\ref{eq:single_mode_transmission} to fit the data giving the values of $300$ MHz and $50$ MHz for the $\kappa_j^{(i)}$ and $\kappa_j^{(e)}$, respectively. The mode are at frequency $\omega_j = 2\pi\times195.25$ THz which give us a $Q \approx 2\times10^6$.
 
-%The same setup are used
-Using an stepper motor instead of the piezo it possible to modulate the frequency in few THz enabling us to measure different families of modes, as show in Fig~\ref{fig:exp_mode_charac}c). The spectral distance of a mode in consecutive families give the $FSR_j$ for the $j$ mode. 
+Using an stepper motor instead of the piezo it possible to modulate the frequency in few THz enabling us to measure different families of modes, as show in Fig~\ref{fig:exp_mode_charac}c). The spectral distance of a mode in consecutive families give the $FSR_j$ for the $j$ mode. Our cavities present an FSR around $300$ GHz, which have to due mostly with the radius of the device. 
 
+According with the Eq.~\ref{eq:finesse}, we reached a finesse of about $\mathcal{F} \approx 1000$. A device with this parameters enable to amplify the incoming power, due to photons recycling, about $1000$ times. If used a input power of $1$ W, we can reach the $1$ KW of circulating power mentioned at the begin of this Chapter. In general terms, it make our device a good platform to generate nonlinear effects. 
 
+A Fraction of the losses are due the material absorption, when we are working with high intracavity power this absorption lead to a thermal effects called bistability. 
+
+\subsection{Pump Bistability}
+The resonance frequency of the cavity are correlated with the refractive index of the material, which is a function of the temperature. Treating this as a perturbation problem, we can write 
+
+\begin{subequations}
+    \begin{alignat}{2}
+        \frac{\Delta\omega}{\omega} &= -\frac{\Delta \text{n}_\text{eff}}{\text{n}_\text{eff}}\\
+        \frac{\Delta\omega}{\omega} &= -\frac{\int \text{n}^2\vec{e}^*\Delta\text{n}\vec{e} d^3r}
+        {\int \text{n}^2 |\vec{e}|^2 d^3r}
+    \end{alignat}
+\end{subequations}
 
 
 
