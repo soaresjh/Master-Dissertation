@@ -1,5 +1,4 @@
 \chapter{Nonlinear Optics}
-
 %Descrição de polarização não-linear, potencial atómico. Descrição no bulk de geração de terceiro harmônico. 
 \section{Optical Polarization}
 An important subject of optics science to describe the interaction between light and matter is the dipole moment per unit volume, which is called polarization. In a dielectric medium the polarization occurs mainly due induced dipoles.
@@ -15,19 +14,26 @@ Lets consider a neutral atom placed in an electric field $\vec{E}$. A priori the
 \begin{equation}
     \vec{p} = q\vec{d}.
 \end{equation}
+\nomenclature{$\vec{p}$}{Dipole Moment}
+\nomenclature{$q$}{Electric Charge}
+\nomenclature{$\vec{d}$}{Electron Displacement from Rest Position}
 Wheres $q$ is the charge of the nucleus. 
 
 When a weak external electric field is considered (if compared with the atomic electric field), we can approach the atomic potential to a parabolic, as show in Fig~\ref{fig:polarization}c. The restoring force, therefore, is linear with distance. In such model, the polarization $\vec{p}$ is linear with the external electric field
 \begin{equation}
     \vec{p} = \alpha \vec{E}.
 \end{equation}
+\nomenclature{$\vec{E}$}{Electric Field}
 Where $\alpha$ is a constant called atomic polarization and depends on the atomic structure. This simple model is, in fact, in well agreement with experimental result.  
 
 The result for a single atom can easily extend for a solid body applying the principle of  superposition, this way
 \begin{equation}
     \vec{P} = \epsilon_0\chi^{(1)}\vec{E}.
 \end{equation}
-Where $\susce{1}$ is the linear suceptibility and depends on the atomic configuration.
+\nomenclature{$\vec{P}$}{Electric Polarization}
+\nomenclature[1]{$\chi^{(1)}$}{Linear Susceptibility}
+\nomenclature{$\epsilon_0$}{Vacuum Permittivity}
+Where $\susce{1}$ is the linear susceptibility and depends on the atomic configuration.
 
 The assumption of weak external electric field implies in a small displacement, otherwise we can't assume a parabolic potential due to the anharmonic form of the interatomic potential. 
 
@@ -120,6 +126,7 @@ For a solid body we have
     \vec{P} = \epsilon_0\chi^{(1)}\vec{E} + \epsilon_0\chi^{(2)}\vec{E}^2+\epsilon_0\chi^{(3)}\vec{E}^3+....
 \label{eq:nonlim_pol}
 \end{equation}
+\nomenclature[2]{$\chi^{(n)}$}{High Order Electric Susceptibility}
 Note that the nonlinear susceptibility, $\chi^{(2)}$, $\chi^{(3)}$, are tensors.
 
 The main reason behind the math showed in this section is to make clear and intuitive that the generation of high orders harmonics occurs only due the interaction between an incident wave and the matter. This will be an important statement further below. 
@@ -146,7 +153,7 @@ We consider a nonmagnectic material, hence
 \begin{equation}
     \vec{B} = \mu_0 \vec{H}
 \end{equation}
-
+\nomenclature[4]{$\mu_0$}{Vacuum Permeability}
 %Otherwise, by consider a nonlinear medium, for the electric field we have
 %\begin{equation}
 %    \vec{D} = \epsilon_0\vec{E} + \vec{P}
@@ -157,6 +164,7 @@ Applying some math, is possible to rewrite the Maxwell's equations in wave equat
 \begin{equation}
     \nabla^2\vec{E} - \frac{1}{\epsilon_0 c^2}\frac{\partial^2}{\partial t^2}\vec{D} = 0
 \end{equation}
+\nomenclature{\vec{D}}{Displacement Vector}
 As we considered a nonlinear optical medium, we shall use
 \begin{subequations}
     \begin{align}

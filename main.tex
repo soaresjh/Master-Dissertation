@@ -16,6 +16,8 @@
 \usepackage{pdfpages}
 \usepackage{tabularx}
 \usepackage[ampersand]{easylist}
+\usepackage{nomencl}
+\makenomenclature
 
 \usepackage{xcolor}
 \usepackage{sectsty}
@@ -135,6 +137,10 @@
 \tableofcontents
 \thispagestyle{empty}
 \newpage
+\thispagestyle{empty}
+\printnomenclature
+\thispagestyle{empty}
+\newpage
 \setcounter{page}{1}
 \include{dis_jhs_cap1}
 \include{dis_jhs_cap2}
@@ -143,6 +149,8 @@
 \include{dis_jhs_cap5}
 \include{dis_jhs_cap6}
 \include{dis_jhs_conc}
+\appendix
+\include{dis_jhs_app1}
 
 \addcontentsline{toc}{chapter}{Referênciasbibliográficas}
 \spacing{1.15}

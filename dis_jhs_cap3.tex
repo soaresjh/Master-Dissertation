@@ -17,6 +17,7 @@ A typical optical mode, for a Whispering Gallery Mode (don't worry, it will be c
 \begin{equation}
     E_\text{confined} = \sqrt{\frac{2}{c\text{n}\epsilon_0}\frac{P}{A}} \approx 3 \times 10^8\text{V/m}.
 \end{equation}
+\nomenclature{$c$}{Speed of Light in Vacuum}
 Where $\text{n}$ is the refraction index for silicon. 
 
 Lets first introduce the theory for uncoupled modes, where I describe the behavior of any single mode of the cavity. Them we consider the nonlinearity of the medium to describe the coupled mode theory. 
@@ -82,6 +83,12 @@ In typical laboratory condition, $a_{in}(t)$ correspond to a narrow spectral dis
     \dot{a}_j = -\left(i\Delta_j +\frac{\kappa_j}{2}\right)a_j +\sqrt{\kappa^{(e)}_j}a_{in}.
     \label{eq:rate_equation_unperturbed}
 \end{equation}
+\nomenclature{$\kappa$}{Total Cavity Loss}
+\nomenclature{$\kappa^{(i)}$}{Intrinsic Cavity Loss}
+\nomenclature{$\kappa^{(e)}$}{Coupling Cavity Loss}
+\nomenclature{$\Delta$}{Laser Detuning}
+
+
 where $\Delta_j = \omega_j - \omega_L$ is called the detuning.
 \begin{figure}[t!]
     \centering
@@ -117,7 +124,7 @@ In order to better understand the concept of Free Spectral Range and how do it l
 
 \subsection{Spatial Equations}
 
-Initially lets consider a propagating wave at frequency $\omega$. From the Maxwell's equations it is possible to write (Notice that I intentionally did not labeled the frequency of the wave, that's because I want to keep clear that there is no connection between this frequency and the frequency of the mode seen previously, in fact, this is the source frequency) 
+Initially lets consider a propagating wave at frequency $\omega$. From the Maxwell's equations it is possible to write
 \begin{subequations}
     \begin{alignat}{2}
     &\nabla^2\vec{h}_j+\beta^2n^2\vec{h}_j &&= \nabla(\nabla\cdot\vec{h}_j),\\
@@ -138,12 +145,16 @@ We shall assume that the solution is a wave that propagate in $z$ direction with
 \end{subequations}
 Where $\nabla_t^2 = \nabla^2 - \partial^2/\partial z^2$.
 
-You might have overlooked it, dear reader, but the Eq\ref{eq:wave_eq} is, in fact, a system with 6 equation, one for which field in which coordinate. Due to the symmetry of the problem, is suitable write it in cylindrical coordinates, which enable us to decouple the equation for the $z$ direction, hence
+It might be have been overlooked, but the Eq~\ref{eq:wave_eq} is a system with 6 equation; one for which field in each coordinate. This set of equation with boundary condition define well our problem. To solve this equations we must apply consideration about symmetry, however we use numerical methods to solve it. We will use the commercial software COMSOL\regmark, in Appendix~\ref{app:Comsol_Solution} we explained step by step how this solutions are done. 
 
-\begin{equation}
-    \frac{1}{r}\pdiff{}{r}\left(r \pdiff{ }{r}\psi\right)+\frac{1}{r^2} \pdiff{^2}{\phi^2}\psi + (\beta^2\text{n}^2-k_j^2)\psi = 0 
-\end{equation}
-Where $\psi$ can be replaced be the z-component of either electric or magnetic fields. To simplify our notation, til the end spatial treatment I will omit the label $j$ of the field components. 
+Until now we have talk about generic electromagnetic modes, however, to 
+
+%Due to the symmetry of the problem, is suitable write it in cylindrical coordinates, which enable us to decouple the equation for the $z$ direction, hence
+%
+%\begin{equation}
+%    \frac{1}{r}\pdiff{}{r}\left(r \pdiff{ }{r}\psi\right)+\frac{1}{r^2} \pdiff{^2}{\phi^2}\psi + (\beta^2\text{n}^2-k_j^2)\psi = 0
+%\end{equation}
+%Where $\psi$ can be replaced be the z-component of either electric or magnetic fields. To simplify our notation, til the end spatial treatment I will omit the label $j$ of the field components. 
 
 
 
