@@ -1,23 +1,38 @@
-%Chapter 2
+\renewcommand\nomgroup[1]
+{%
+    \item[\bfseries
+        \ifstrequal{#1}{B}{Chapter 2}{%
+        \ifstrequal{#1}{C}{Chapter 3}{%
+        \ifstrequal{#1}{D}{Chapter 4}{%
+        \ifstrequal{#1}{E}{Chapter 5}{%
+        \ifstrequal{#1}{F}{Chapter 6}{%
+        \ifstrequal{#1}{G}{Chapter 7}{}
+        }}}}
+        }
+    ]
+}
 
-\nomenclature[7]{$\vec{p}$}{Dipole Moment}
-\nomenclature[6]{$q$}{Electric Charge}
-\nomenclature[8]{$\vec{x}$}{Electron Displacement from Rest Position}
-\nomenclature[9]{$\vec{E}$}{Electric Field}
-\nomenclature[10]{\vec{D}}{Displacement Vector}
-\nomenclature[3]{$\mu_0$}{Vacuum Permeability}
-\nomenclature[5]{$\chi^{(n)}$}{High Order Electric Susceptibility}
-\nomenclature[11]{$\vec{P}$}{Electric Polarization}
-\nomenclature[4]{$\chi^{(1)}$}{Linear Susceptibility}
-\nomenclature[2]{$\epsilon_0$}{Vacuum Permittivity}
-\nomenclature[1]{$c$}{Speed of Light in Vacuum}
+%Chapter 2
+\nomenclature[B 6]{$q$}{Eletric Charge}
+\nomenclature[B 7]{$\vec{p}$}{Dipole Moment}
+\nomenclature[B 8]{$q$}{Electric Charge}
+\nomenclature[B 9]{$\vec{x}$}{Electron Displacement from Rest Position}
+\nomenclature[B]{$\vec{E}$}{Electric Field}
+\nomenclature[B]{\vec{D}}{Displacement Vector}
+\nomenclature[B 3]{$\mu_0$}{Vacuum Permeability}
+\nomenclature[B 6]{$\chi^{(n)}$}{High Order Electric Susceptibility}
+\nomenclature[B]{$\vec{P}$}{Electric Polarization}
+\nomenclature[B 5]{$\chi^{(1)}$}{Linear Susceptibility}
+\nomenclature[B 2]{$\epsilon_0$}{Vacuum Permittivity}
+\nomenclature[B 1]{$c$}{Speed of Light in Vacuum}
 
 %Chapter 3
-\nomenclature[12]{\vec{e}}{Space Dependent Part of the Electric Field}
-\nomenclature[13]{\vec{h}}{Space Dependent Part of the Magnetic Field}
-\nomenclature[14]{$\kappa$}{Total Cavity Loss}
-\nomenclature[15]{$\kappa^{(i)}$}{Intrinsic Cavity Loss}
-\nomenclature[16]{$\kappa^{(e)}$}{Coupling Cavity Loss}
-\nomenclature[17]{$\Delta$}{Laser Detuning}
-\nomenclature[18]{$\mathcal{F}$}{Finesse}
-
+\nomenclature[C 1]{\vec{e}}{Space Dependent Part of the Electric Field}
+\nomenclature[C 2]{\vec{h}}{Space Dependent Part of the Magnetic Field}
+\nomenclature[C 3]{$\kappa$}{Total Cavity Loss}
+\nomenclature[C 4]{$\kappa^{(i)}$}{Intrinsic Cavity Loss}
+\nomenclature[C 5]{$\kappa^{(e)}$}{Coupling Cavity Loss}
+\nomenclature[c 6]{$\omega$}{Frequency of the Source}
+\nomenclature[C 7]{$\Delta$}{Laser Detuning}
+\nomenclature[C 8]{$\mathcal{F}$}{Finesse}
+\nomenclature[c ]{$\beta$}{Vacuum Wavenumber of Light}

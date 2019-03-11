@@ -11,22 +11,23 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{braket}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{array}
 \usepackage{pdfpages}
 \usepackage{tabularx}
 \usepackage[ampersand]{easylist}
 \usepackage{nomencl}
 \makenomenclature
+\usepackage{etoolbox}
 
-\usepackage{xcolor}
-\usepackage{sectsty}
-\chapterfont{\color{blue}}
-\sectionfont{\color{cyan}}
+%\usepackage{sectsty}
+%\chapterfont{\color{blue}}
+%\sectionfont{\color{cyan}}
 
 \usepackage[bold]{hhtensor}
 \usepackage{setspace}
 \usepackage{epigraph}
+\usepackage[colorlinks]{hyperref}
 
 \usepackage[small]{caption}
 \setlength{\captionmargin}{20pt}
@@ -39,16 +40,19 @@
 \newcommand{\tab}{\hspace{1cm}}
 \definecolor{lightblue}{rgb}{0.45,0.45,0.95}
 \definecolor{darkblue}{rgb}{0.12,0.15,0.49}
+\definecolor{NewBlue}{rgb}{0,0,0.4}
+\definecolor{RoyalBlue}{rgb}{0,0,0.6}
+
 % Hyperlink options
-\usepackage[letterpaper,linktocpage]{hyperref}
-\hypersetup{colorlinks=true,       % false: boxed links; true: colored links
-	linkcolor=darkblue,          % color of internal links
+%\usepackage[letterpaper,linktocpage]{hyperref}
+\hypersetup{colorlinks=true,       
+	linkcolor= NewBlue,          % color of internal links
 	citecolor=blue,        % color of links to bibliography
 	urlcolor=black,
 	bookmarksnumbered=true,
 	pdffitwindow=true, 
 	%bookmarks=true,
-    pdftitle={Relatorio parcial cpg},
+    pdftitle={Master Dissertation},
     pdfauthor={Jorge H. Soares}
     }    
     
@@ -87,6 +91,8 @@
 \DeclareMathOperator{\sen}{sen}
 \newcommand{\dg}{$^\text{o}$}
 \newcommand{\regmark}{\textsuperscript{\textregistered}}   
+\newcommand{\subref}[2]{\ref{#1}\textcolor{NewBlue}{#2}}
+
 
 \definecolor{NewBlue}{rgb}{0,0,0.4}
 \definecolor{RoyalBlue}{rgb}{0,0,0.6}
@@ -95,7 +101,7 @@
 \usepackage{sectsty}
 \chapternumberfont{\color{NewBlue}\Huge} 
 \chaptertitlefont{\color{NewBlue}\Huge}
-\sectionfont{\color{RoyalBlue}\large}
+\sectionfont{\color{NewBlue}\large}
 \subsectionfont{\color{RoyalBlue}\large}
 \subsubsectionfont{\color{RoyalBlue}\small}
 
@@ -157,19 +163,20 @@ Carta de Aprovação
 \include{dis_jhs_abs}
 
 %\thispagestyle{empty}
-\begin{singlespacing}
-    \tableofcontents
-\end{singlespacing}
-\thispagestyle{empty}
-
+\thispagestyle{empty}{
+    \begin{singlespacing}
+        \tableofcontents
+    \end{singlespacing}
+}
 %\newpage
 %\thispagestyle{empty}
 
-\include{dis_jhs_nomenclature}
-\begin{singlespacing}
-    \printnomenclature
-\end{singlespacing}
-\thispagestyle{empty}
+\thispagestyle{empty}{
+    \begin{singlespacing}
+        \include{dis_jhs_nomenclature}
+        \printnomenclature
+    \end{singlespacing}
+}
 
 %\newpage
 %\setcounter{page}{1}
