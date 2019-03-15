@@ -90,7 +90,7 @@ where $\Delta_\alpha = \omega_\alpha - \omega$ is called the detuning.
 \begin{figure}[t!]
     \centering
     \includegraphics[width = 16cm]{Dissertation_rate_equation.jpg}
-    \caption{Caption}
+    \caption{\textbf{a) Time Dependence Solution of Intracavity Energy:} The energy stored in a cavity oscillate in a frequency $\Delta_\alpha$ and decay with a rate $\kappa_\alpha$ to the Stead Solution. \textbf{b) Picture System:} Our System are compound by a cavity with a single mode $a_\alpha$ that presents intrinsic loss $\kappa_\alpha^{(i)}$. The mode couple with a Source at a rate $\kappa_\alpha^{(e)}$ and interacts with an incoming wave with complex amplitude $a_{in}$. The squared modulus of the output $S_\alpha$ are measured. \textbf{c) Spectroscopy of the $\alpha$th mode:} The transmission of the cavity gives a Lorentzian curve wheres the full width at half maximum correspond to the total loss. This graphic show it for three different regimes.}
     \label{fig:rate_equations_single_mode}
 \end{figure}
 
@@ -141,11 +141,15 @@ We shall assume that the solution is a wave that propagate in $z$ direction with
 \end{subequations}
 Where $\nabla_t^2 = \nabla^2 - \partial^2/\partial z^2$.
 
+\begin{figure}[b!]
+    \centering
+    \includegraphics[width =16cm]{Dissertation_wgm.jpg}
+    \caption{Caption}
+    \label{fig:wgm}
+\end{figure}
 It might be have been overlooked, but the Eq~\ref{eq:wave_eq} is a system with 6 equation; one for which field in each coordinate. The solution for this set of equation with boundary condition define the optical modes of our problem. To solve this equations we must apply consideration about symmetry, however we use numerical methods to solve it. We will use the commercial software COMSOL\regmark, in Appendix~\ref{app:Comsol_Solution} we explained step by step how this solutions are done. 
 
-Until now we have talk about generic electromagnetic modes, with no spatial boundary condition, in order to define them we must define the geometry of our cavity. Our device are based in disk microcavities, as show in Fig~%\subref{}{a}
-, this kind of resonator presents the so called Whispering Gallery Modes (WGM), due to cylindrical symmetry. In order to archive high life time of the photons inside the cavity we use a wedge cavity, as show in Fig~%\subref{}{b}
-, the angle present at edge makes the electric field to be less perpendicular to the surface leading to lower loss due to scattering. The fabrication process have a important role in here, as we shall see below. 
+Until now we have talk about generic electromagnetic modes, with no spatial boundary condition, in order to define them we must define the geometry of our cavity. Our device are based in disk microcavities, as show in Fig~\subref{fig:wgm}{a}, this kind of resonator presents the so called Whispering Gallery Modes (WGM), due to cylindrical symmetry. In order to archive high life time of the photons inside the cavity we use a wedge cavity. Fig~\subref{fig:wgm}{b} show a photo take using a Scanning Electron Microscope (SEM) of the cavity used in this study, the angle present at edge makes the electric field to be less perpendicular to the surface leading to lower loss due to scattering\needcit. The fabrication process have a important role in here, as we shall see below. 
 
 The boundary condition lead to the characteristic equation in the form 
 \begin{equation}
@@ -156,8 +160,7 @@ The solution of this equation in function of the frequency $\omega$ give us the 
 
 The set of constants, $k_r,k_\theta,k_z$, that solve this equation define a mode. As the mode is confined in a region, we can correlate this constants, that can assume any complex value, to integer with spatial representation.
 
-The WGM are labeled in the format TExy and TMxy modes, where x and y are integer correlated with $k_r$ and $k_z$, respectively. Beside that, given a TExy (TMxy) mode it can have several values of $m$, which is a integer correlated with $k_\theta$, it also define the family of the mode. The spatial mean of the constants are show in Fig~%\ref{}
-. Just to clarify the nomenclature adopted in this dissertation, henceforward the term '$\alpha$th mode' are applied for a TExy or TMxy mode with any value of $m$. 
+The WGM are labeled in the format TExy and TMxy modes, where x and y are integer correlated with $k_r$ and $k_z$, respectively. Beside that, given a TExy (TMxy) mode it can have several values of $m$, which is a integer correlated with $k_\theta$, it also define the family of the mode. The value of x,y and $m$ can be interpreted as the number of antinodes in the intensity of the electric field in each coordinate as defined in the Fig~\subref{fig:wgm}{c}. Just to clarify the nomenclature adopted in this dissertation, henceforward the term '$\alpha$th mode' are applied for a TExy or TMxy mode with any value of $m$. 
 
 The solution of the Eq~\ref{eq:char_eq} give rise to the dispersion of the cavity. As the Round Trip Time depend on the group velocity, it can be extracted from the dispersion by the relation
 \begin{equation}
@@ -196,7 +199,13 @@ According with the Eq.~\ref{eq:finesse}, we reached a finesse of about $\mathcal
 A Fraction of the losses are due the material absorption, when we are working with high intracavity power this absorption lead to a thermal effects called bistability. 
 
 \subsection{Pump Bistability}
-The resonance frequency of the cavity are correlated with the refractive index of the material, which is a function of the temperature. Treating this as a perturbation problem, we can write 
+The resonance frequency of the cavity are correlated with the refractive index of the material, which is a function of the temperature. Treating this as a perturbation problem, we can write \begin{figure}[b]
+    \centering
+    \includegraphics[width = 16cm]{Dissertation_bistabilite.jpg}
+    \caption{Caption}
+    \label{fig:bistable}
+\end{figure}
+
 \begin{subequations}
     \begin{alignat}{2}
         \frac{\Delta\omega_\alpha}{\omega_\alpha} &= -\frac{\Delta \text{n}_\text{eff}}{\text{n}_\text{eff}}\\
@@ -224,9 +233,10 @@ As usual, we looking to the steady state solution. Depending on the $\Delta$ val
 \begin{equation}
     |a_\alpha|^2 = \frac{4\kappa^{(e)}_\alpha |a_{in}|^2}{4\left(\Delta_\alpha + \omega_\alpha A|a_\alpha|^2\right)^2+\kappa_\alpha^2} 
 \end{equation}
-The Fig~%\ref{fig:bistable}a
-shows the plot of the LHS and RHS in function of $|a_\alpha|^2$. Depending on the value of $\Delta_\alpha$ and $|a_{in}|$ there are three different solutions for this equation, but the intermediate one is always unstable, which lead to the well-know bistable transmission show in Fig~%\ref{fig:bistable}b
-Controlling the input power using the attenuator, as showed in the setup of the Fig~\ref{fig:exp_mode_charac}c, it is possible to experimental measure the bistability, this measure are show in Fig~%\ref{fig:bistable}c 
+
+The Fig~\ref{fig:bistable}a
+shows the plot of the LHS and RHS in function of $|a_\alpha|^2$. Depending on the value of $\Delta_\alpha$ and $|a_{in}|$ there are three different solutions for this equation, but the intermediate one is always unstable, which lead to the well-know bistable transmission show in Fig~\ref{fig:bistable}b
+Controlling the input power using the attenuator, as showed in the setup of the Fig~\ref{fig:exp_mode_charac}c, it is possible to experimental measure the bistability, this measure are show in Fig~\ref{fig:bistable}c 
 .
 
 As the pump frequency get closer to the resonance frequency, the intracavity power increases, which shifts the resonance to the red through self-phase modulation, until the pump frequency, $\omega$, reaches the resonance frequency, $\omega_\alpha$; at this point, the effective detuning is zero and the energy stored in the cavity it's maximum.  
