@@ -71,38 +71,38 @@ This step introduce some extra terms in the Eq~\ref{eq:rate_equation_1}, which r
 \end{equation}
 Wheres $\kappa_\alpha = \kappa^{(i)}_\alpha+\kappa^{(e)}_\alpha$ are the total rate of energy loss, composed by the intrinsic loss, suck material absorption and scattering loss, and couple loss due to coupling with the source. 
 
-Finally, from input-output theory, it can be show that the feeding term can be written as $\sqrt{\kappa^{(e)}_\alpha}a_{in}(t)$, where $|a_{in}|^2$ gives the input power. Beside that, for our first analysis, we will consider that the nonlinear therm is small enough to be disregarded. This trick enable us to treat separately the temporal and spatial behavior of the optical modes. 
+Finally, from input-output theory, it can be show that the feeding term can be written as $\sqrt{\kappa^{(e)}_\alpha}S_{in}(t)$, where $|S_{in}|^2$ gives the input power. Beside that, for our first analysis, we will consider that the nonlinear therm is small enough to be disregarded. This trick enable us to treat separately the temporal and spatial behavior of the optical modes. 
 
 \subsection{Temporal Equations}
 
 To describe the temporal evolution of the confined modes, we use the rate equation write as 
 \begin{equation}
-    \dot{a}_\alpha = -\left(i\omega_\alpha +\frac{\kappa_\alpha}{2}\right)a_\alpha +\sqrt{\kappa^{(e)}_\alpha}a_{in}(t).
+    \dot{a}_\alpha = -\left(i\omega_\alpha +\frac{\kappa_\alpha}{2}\right)a_\alpha +\sqrt{\kappa^{(e)}_\alpha}S_{in}(t).
     \label{eq:rate_equation2}
 \end{equation} 
 
-In typical laboratory condition, $a_{in}(t)$ correspond to a narrow spectral distribution centered at frequency $\omega$. We are able to rewrite Eq~\ref{eq:rate_equation2} in a rotating reference frame that turns the source terms into a constant by interchange $a_\alpha \rightarrow a_\alpha e^{-i\omega t}$
+In typical laboratory condition, $S_{in}(t)$ correspond to a narrow spectral distribution centered at frequency $\omega$. We are able to rewrite Eq~\ref{eq:rate_equation2} in a rotating reference frame that turns the source terms into a constant by interchange $a_\alpha \rightarrow a_\alpha e^{-i\omega t}$
 \begin{equation}
-    \dot{a}_\alpha = -\left(i\Delta_\alpha +\frac{\kappa_\alpha}{2}\right)a_\alpha +\sqrt{\kappa^{(e)}_\alpha}a_{in}.
+    \dot{a}_\alpha = -\left(i\Delta_\alpha +\frac{\kappa_\alpha}{2}\right)a_\alpha +\sqrt{\kappa^{(e)}_\alpha}S_{in}.
     \label{eq:rate_equation_unperturbed}
 \end{equation}
 where $\Delta_\alpha = \omega_\alpha - \omega$ is called the detuning.
 \begin{figure}[t!]
     \centering
     \includegraphics[width = 16cm]{Dissertation_rate_equation.jpg}
-    \caption{\textbf{a) Time Dependence Solution of Intracavity Energy:} The energy stored in a cavity oscillate in a frequency $\Delta_\alpha$ and decay with a rate $\kappa_\alpha$ to the Stead Solution. \textbf{b) Picture System:} Our System are compound by a cavity with a single mode $a_\alpha$ that presents intrinsic loss $\kappa_\alpha^{(i)}$. The mode couple with a Source at a rate $\kappa_\alpha^{(e)}$ and interacts with an incoming wave with complex amplitude $a_{in}$. The squared modulus of the output $S_\alpha$ are measured. \textbf{c) Spectroscopy of the $\alpha$th mode:} The transmission of the cavity gives a Lorentzian curve wheres the full width at half maximum correspond to the total loss. This graphic show it for three different regimes.}
+    \caption{\textbf{a) Time Dependence Solution of Intracavity Energy:} The energy stored in a cavity oscillate in a frequency $\Delta_\alpha$ and decay with a rate $\kappa_\alpha$ to the Stead Solution. \textbf{b) Picture System:} Our System are compound by a cavity with a single mode $a_\alpha$ that presents intrinsic loss $\kappa_\alpha^{(i)}$. The mode couple with a Source at a rate $\kappa_\alpha^{(e)}$ and interacts with an incoming wave with complex amplitude $S_{in}$. The squared modulus of the output $S_\alpha$ are measured. \textbf{c) Spectroscopy of the $\alpha$th mode:} The transmission of the cavity gives a Lorentzian curve wheres the full width at half maximum correspond to the total loss. This graphic show it for three different regimes.}
     \label{fig:rate_equations_single_mode}
 \end{figure}
 
 The Eq~\ref{eq:rate_equation_unperturbed} accepts harmonic solutions with frequency $\Delta_\alpha$. Nevertheless these solutions decay, with a  $\kappa_\alpha/2$ rate, into a steady state solution. We usually operates the system in a time scale much larger than $\kappa^{-1}$, thus we consider just the steady state solution, as show in Fig~\subref{fig:rate_equations_single_mode}{a}
 
-We have already introduced the required formalism to describe our problem, at this point a more pictorial view of it would be very useful. For that we shall use the Fig~\subref{fig:rate_equations_single_mode}{b}. Lets consider our system composed by a optical cavity and a source. This cavity have a optical mode with amplitude $a_\alpha$, and present intrinsic energy loss $\kappa_\alpha^{(i)}$ due scattering and absorption. The source carry a input wave $a_{in}$ at frequency $\omega$ which couple with the cavity at a $\kappa_\alpha^{(e)}$ rate, the optical mode couple back with the source at the same frequency, in such way that this couple is seen as a loss channel. The outgoing wave, defined as $S_\alpha$, carry information about the source and the optical mode, in this way
+We have already introduced the required formalism to describe our problem, at this point a more pictorial view of it would be very useful. For that we shall use the Fig~\subref{fig:rate_equations_single_mode}{b}. Lets consider our system composed by a optical cavity and a source. This cavity have a optical mode with amplitude $a_\alpha$, and present intrinsic energy loss $\kappa_\alpha^{(i)}$ due scattering and absorption. The source carry a input wave $S_{in}$ at frequency $\omega$ which couple with the cavity at a $\kappa_\alpha^{(e)}$ rate, the optical mode couple back with the source at the same frequency, in such way that this couple is seen as a loss channel. The outgoing wave, defined as $S_\alpha$, carry information about the source and the optical mode, in this way
 \begin{equation}
-    S_\alpha = a_{in} - \sqrt{2 \kappa_\alpha^{(e)}}a_\alpha.
+    S_\alpha = S_{in} - \sqrt{2 \kappa_\alpha^{(e)}}a_\alpha.
 \end{equation}
 For the steady state solution we have $\dot{a} = 0$, which lead us to define the transmission of the cavity as
 \begin{equation}
-    T = \left|\frac{S_\alpha}{a_{in}}\right|^2 = \frac{\left(\kappa_\alpha^{(i)} -\kappa_\alpha^{(e)}\right)^2 + (2\Delta_\alpha)^2}{\left(\kappa_\alpha^{(i)} +\kappa_\alpha^{(e)}\right)^2 + (2\Delta_\alpha)^2}.
+    T = \left|\frac{S_\alpha}{S_{in}}\right|^2 = \frac{\left(\kappa_\alpha^{(i)} -\kappa_\alpha^{(e)}\right)^2 + (2\Delta_\alpha)^2}{\left(\kappa_\alpha^{(i)} +\kappa_\alpha^{(e)}\right)^2 + (2\Delta_\alpha)^2}.
     \label{eq:single_mode_transmission}
 \end{equation}
 
@@ -144,7 +144,7 @@ Where $\nabla_t^2 = \nabla^2 - \partial^2/\partial z^2$.
 \begin{figure}[b!]
     \centering
     \includegraphics[width =16cm]{Dissertation_wgm.jpg}
-    \caption{Caption}
+    \caption{\textbf{a) Whispering Gallery Mode:} Intensity of the electric field. The WGM confine the optical mode in the edges of the cavity. \textbf{b) Wedge Cavity:} Image take from a Scanning Electron Microscope of the cavity used in this study. \textbf{c) Coordinates:} The coordinates of the problem are defined as that. This mode is a TM21 with $m = 526$ and frequency $\omega_\alpha/2\pi = 193.5$~THz}.
     \label{fig:wgm}
 \end{figure}
 It might be have been overlooked, but the Eq~\ref{eq:wave_eq} is a system with 6 equation; one for which field in each coordinate. The solution for this set of equation with boundary condition define the optical modes of our problem. To solve this equations we must apply consideration about symmetry, however we use numerical methods to solve it. We will use the commercial software COMSOL\regmark, in Appendix~\ref{app:Comsol_Solution} we explained step by step how this solutions are done. 
@@ -186,7 +186,7 @@ The experiment is made using the setup showed in the  Fig~\ref{fig:exp_mode_char
 \begin{figure}[h!]
     \centering
     \includegraphics[width = 16cm]{figuras/Dissertation_optical_char_exp.jpg}
-    \caption{Caption}
+    \caption{\textbf{a) Experimental Setup:} The key components of the Setup is the Laser used as source, a tapered optical fiber that couple the source with the cavity and power meter to monitor the output. The frequency of the laser are precisely determined using a Frequency Reference (FR) composed of a Mach Zehnder interferometer and a Hydrogen Cyanide cell. We use a tunable attenuator (ATT) to control the input power. The polarization of the input wave is controlled using a fiber polarization control (PW). \textbf{b) Single Mode:} Transmission for a single mode used to measure the losses of the mode. \textbf{c) Broad Band Transmission:} spectroscopy of the cavity for a broad band to measured the Free Spectral Range.} 
     \label{fig:exp_mode_charac}
 \end{figure}
 
@@ -199,12 +199,8 @@ According with the Eq.~\ref{eq:finesse}, we reached a finesse of about $\mathcal
 A Fraction of the losses are due the material absorption, when we are working with high intracavity power this absorption lead to a thermal effects called bistability. 
 
 \subsection{Pump Bistability}
-The resonance frequency of the cavity are correlated with the refractive index of the material, which is a function of the temperature. Treating this as a perturbation problem, we can write \begin{figure}[b]
-    \centering
-    \includegraphics[width = 16cm]{Dissertation_bistabilite.jpg}
-    \caption{Caption}
-    \label{fig:bistable}
-\end{figure}
+
+The resonance frequency of the cavity are correlated with the refractive index of the material, which is a function of the temperature. Treating this as a perturbation problem, we can write 
 
 \begin{subequations}
     \begin{alignat}{2}
@@ -223,25 +219,31 @@ Here, the $\Delta T$ is proportional from the amount of energy absorbed by the m
 \label{eq:pertubation_bistaliti_cavity}
 \end{equation}   
 
-Including the contribution in the rate equation, Eq~\ref{eq:rate_equation2}, after the transformation of reference frame, the bistable rate equation can be write as 
+Including the contribution in the rate equation Eq~\ref{eq:rate_equation2} after the transformation of reference frame, the bistable rate equation can be write as 
 \begin{equation}
-\dot{a}_\alpha = -\left(i\Delta_\alpha + i\omega_\alpha A|a_\alpha|^2 + \frac{\kappa_\alpha}{2}\right)a_\alpha + \sqrt{\kappa^{(e)}_\alpha}a_{in}
+\dot{a}_\alpha = -\left(i\Delta_\alpha + i\omega_\alpha A|a_\alpha|^2 + \frac{\kappa_\alpha}{2}\right)a_\alpha + \sqrt{\kappa^{(e)}_\alpha}S_{in}
 \label{eq:rate_equation_bistable}
 \end{equation}
+The new term $A$ is called the of self phase modulation (SFM),
 
 As usual, we looking to the steady state solution. Depending on the $\Delta$ value, this equation can present three different solutions. To visualize it, lets write the Eq~\ref{eq:rate_equation_bistable} as 
 \begin{equation}
-    |a_\alpha|^2 = \frac{4\kappa^{(e)}_\alpha |a_{in}|^2}{4\left(\Delta_\alpha + \omega_\alpha A|a_\alpha|^2\right)^2+\kappa_\alpha^2} 
+    |a_\alpha|^2 = \frac{4\kappa^{(e)}_\alpha |S_{in}|^2}{4\left(\Delta_\alpha + \omega_\alpha A|a_\alpha|^2\right)^2+\kappa_\alpha^2} 
 \end{equation}
 
-The Fig~\ref{fig:bistable}a
-shows the plot of the LHS and RHS in function of $|a_\alpha|^2$. Depending on the value of $\Delta_\alpha$ and $|a_{in}|$ there are three different solutions for this equation, but the intermediate one is always unstable, which lead to the well-know bistable transmission show in Fig~\ref{fig:bistable}b
-Controlling the input power using the attenuator, as showed in the setup of the Fig~\ref{fig:exp_mode_charac}c, it is possible to experimental measure the bistability, this measure are show in Fig~\ref{fig:bistable}c 
-.
+The Fig~\subref{fig:bistable}{a}
+shows the plot of the LHS and RHS in function of $|a_\alpha|^2$. Depending on the value of $\Delta_\alpha$ and $|S_{in}|$ there are three different solutions for this equation, but the intermediate one is always unstable, which lead to the well-know bistable transmission show in Fig~\subref{fig:bistable}{b}
+Controlling the input power using the attenuator, as showed in the setup of the Fig~\subref{fig:exp_mode_charac}{c}, it is possible to experimental measure the bistability, this measure are show in Fig~\subref{fig:bistable}{c}. We found a value of around $A\approx 5.7\times10^7$~J$^{-1}$.
 
 As the pump frequency get closer to the resonance frequency, the intracavity power increases, which shifts the resonance to the red through self-phase modulation, until the pump frequency, $\omega$, reaches the resonance frequency, $\omega_\alpha$; at this point, the effective detuning is zero and the energy stored in the cavity it's maximum.  
 
 As the amplitude is normalize in such way that $|a_\alpha|^2$ is the energy storage in the cavity, hence is proportional to the intensity of the electric field, the effect felt by the cavity due to the Eq~\ref{eq:pertubation_bistaliti_cavity} is similar to the Kerr effect presented in the Eq~\ref{eq:kerr_effect_free_wave}, in fact, in some conditions the both effects are indistinguishable\needcit. For that reason both effects, bistability thermal and Kerr, will all be included in the same term of the rate equation~\ref{eq:rate_equation_bistable}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 16cm]{Dissertation_bistabilite.jpg}
+    \caption{\textbf{a) Numerical Method:} The Yellow curve are the identity function and represents the left side of the bistable rate equation. The curves Red and Blue are the right side of the equation with $\Delta_\alpha$ equal $1\times\kappa_\alpha$ and $-4\times\kappa_\alpha$, respectively, both with $|S_{in}|^2 = 1$. The Green curve have $\Delta_\alpha = -4\times\kappa_\alpha$, but $|S_{in}|^2 = 0.5$. \textbf{b) Bistable Transmission:} The Green and the Blue curves are the stable solution of the rate equation, this curve is well know as a bistable system. The dashed Orange is the unstable solution. The Dashed Gray is the same optical mode out of the regime of bistability. \textbf{c) Experimental Results:} Measuring the losses of the cavity out of the bistable regime, showed in Blue, is possible to measured the Phase Modulation using the frequency shifty due to the bistability. here we have $A_{I} = 5.7\times10^{7}$~J and $A_{II} = 3.2\times10^{6}$~J}
+    \label{fig:bistable}
+\end{figure}
 
 The bistability plays an important role in harmonic generation in optical cavity. Further this role will by better understood.  
 
