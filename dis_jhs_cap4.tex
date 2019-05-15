@@ -1,3 +1,81 @@
 \chapter{Fabrication of Microcavity on Silica}
+\label{chap:fabrication}
+%Descrição do processo de fabricação. Aqui eu não tenho certeza o quanto vai ser aprofundado.  
+One of the must desirable characteristics of a optical microcavity is the capacity of confine light for many cycles, there are two way to reach this characteristic, one is decrease the round trip time and the decrease the intrinsic losses. the round trip time is directly correlated with the geometry of the microcavity, as we work with a fixed geometry our goal is to decrease the intrinsic losses, which is analogous to increase the quality factor. 
 
-Descrição do processo de fabricação. Aqui eu não tenho certeza o quanto vai ser aprofundado.  
+The intrinsic losses are defined as the loss of energy for any other channel that is not the source. We have basically sort of losses: scattering, absorption and band loss~\needcit. As or cavity have a relatively large radius the band loss is negligible~\needcit. The optical absorption of the silica, both in visible and infrared, are considerable low, so that the limiting of the quality factor is the scattering loss. 
+
+A typical microfabrication process consists of three main steps: lithography, etching and release. Often this process, specially lithography and etching, introduce some blemishes in the device, we seek a form to smooth this defects.
+Toroidal microcavities, for example, use a reflow process by heating the surface of the device close to melt temperature making the surface tension reconstruct the surface smoother~\needcit, however, the reflow smoothing is difficult to be applied in larger cavities and limits the integrability of the device. Another option to reach this goal is use a chemical etch~\needcit leading to the wedge shape devices. 
+
+A more technical step-by-step recipe is present in the Appendix~\ref{app:fabric}, in this Chapter we shall look for the details and result of each of the main steps.
+
+\section{Overview}
+
+Our fabrication process begin with a silicon wafer of some inches, typically 4'', with a oxidized layer with 3~$\mu$m of thickness \textbf{(I)}. We divided it in 1$\times$1 mm shards, each shard is a sample. Initially the sample is cleaned using a organic cleaning with Trichloroethylene, isopropyl alcohol, acetone and water, all in a ultrasonic cleaner. The ultrasonic cleaner is also used to deposited the adhesion promoter (SurPass\regmark~3000). The Resist is deposited in a spinner at 4000 RPM, we use a positive photoresit (Sc1827) exposed to a UV using a mask aligner (KARL SUSS MJB3) and developed with a solution of three parts of water for one part of developer (AZ\regmark 351) \textbf{(II)}. Before the exposure the sample is soft baked at 110$^o$C for 1 minute and after the sample is heat at 130$^o$C for 5 minutes to reflow the resist\textbf{(III)}. The silicon oxide layer is etched using a buffered solution of hydrofluoric acid for 40 minutes, giving rise to the wedge disk\textbf{(IV)}. Lastly, the sample is etched with tetramethylammonium hydroxide (TMAH)\textbf{(V)}. 
+
+The Fig. shows the result of each step indicated in the previous paragraph. 
+
+
+\section{Lithography}
+
+In top-down microfabrication it is usually applied to transfer a pattern to a mask in order to protect the subtract during the etching process. 
+
+Initially we deposit a photo sensitive resin, called resist. A chrome mask with the device pattern is used to cover-up the resist, then a UV light source is used to expose the uncovered resist. The UV light cause a chemical change in the resist that allows it to be removed using a specific solution, called developer. 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 16cm]{figuras/Dissertation_litho.jpg}
+    \caption{Caption}
+    \label{fig:litho}
+\end{figure}
+
+A crucial aspect in the lithography process is the adherence between the resist and the substrate. To fabricate this cavities we use a wet etching process, as we shall see below, which is very affected by the adherence. The Fig.%~\ref{fig:adhrence_problem} 
+shows the result of a etching with poor adherence, em some case the device totally vanish from the sample, and the process is not reproducible.
+
+In order to improve the adherence of the resist there are some cares that should be taken before the resist deposition. We have notice that the commercial wafer initially used as substrate present some irregularity in the surface, as show in Fig.%
+, this defects lead to a poor adherence and problems cited above. To solved it we used a non-commercial wafer grown by wet-oxidation. The reproducibility of the process presented a significant improvement, which can be seen in the comparation of the Fig.% 
+. Besides that, a non aggressive organic cleaning is necessary to archive the good results presented.
+
+The replication of the mask pattern in the resist after the development is highly accurate, which could be a problem since it will replicate the defects in the mask also, as can be easily spotted in Fig. A technique to attenuate this kind of defect is to heat the sample to the softening temperature of the resist, in this way the borders of the resist will reconstruct smoother~\needcit, this technique is called reflow. The result is shown in the Fig.~%\ref{fig:reflow}    
+. 
+
+With a well deposited kinkiless resist we can etch the sample to fabricate the wedge disk cavities. 
+
+\section{Etching}
+
+In typical etching process, the resist act as a etch shield protecting the subtract from the etch. In this process, however, the resist orientate the etch direction by smoothly peel off during the etching. The Fig. %
+illustrate how it occurs. Lets say, taking some linguistic liberty, that the interface between the solution and the silica act as a "etch source" of a spherical "etching wave". The "etch wavefront" appears under the resist, centered at the lower edge, when the etchant infiltrates between the resist, it peels off and a new "etch source" is created. A continuous adiabatic resist peeling leads to a straight wall with shallow wedge angle. The result of a inhomogeneous resist peeling is showed in the Fig. 
+
+The reaction between the silica and the hydrofluoric acid occurs following the equation~\cite{Kang_2002} 
+\cheeq{SiO2 + 4HF -> SiF4$_{(g)}$ + 2H2O}.
+A buffered solution is used to maintain the solution concentration constant and decrease the etch rate, leading to a slower reaction which suppress the occurrence of abrupt defects contributing to a smooth surface, decreasing the scattering loss and enabling high Q cavities. A scanning electronic microscopy show unexpected defects in the cavities surface. This image was made using the initial commercial wafer, due to lack of time it wasn't possible to check if the new wafer solved this problem, thus, the origin of this problem is still unknown.    
+
+The etching step build up the device, however they are fully in touch with the silicon layer. To improve the index contrast and enable the mode to be confined, we must release the cavity from the substrate, which is made by etching the silicon.
+
+\section{Release}
+
+The release procedure usually is made using a isotropic etch, otherwise the device would act as a mask. However, due to the crystalline characteristic of the silicon it is possible to apply a anisotropic etch, since the preferential direction is the atomic plan that goes under the device, as illustrated in the Fig.
+
+The wet etch of the silicon occurs at presence of hydroxide that react with the silicon according with the reaction
+\cheeq{Si + 2OH- + 2H2O -> Si (OH4)- + H2$_{(g)}$}
+which is preferentially occurs at the (111) plane direction~\cite{Glembocki_1985}, enabling the releasing of the devices. For that we have test the etch using potassium hydroxide (KOH) and tetramethylammonium hydroxide (TMAH).
+
+The compound \ce{Si(OH)4}, named orthosilicic acid, is aqueous and can also be obtained by the reaction\cite{madou2002fundamentals} 
+\cheeq{SiO2 + 2H2O <=> Si(OH)4}
+which mean that the etching of the silicon can also affect the silicon oxide device. In order to increase the selectivity of the process we have to adjust the concentration and temperature parameters of the solution~\needcit 
+
+Another possible process to release the cavities is the dry etch using \ce{SF6}/\ce{O2} plasma~\cite{Eisele_1981}, which is isotropic, leading to a pedestal as show in Fig. In the etch process we have, basically, two reaction occurring
+\begin{subequations}
+    \begin{alignat}{2}
+        &\ce{Si + 4F& & -> SiF4}\label{etc:si}\\
+        &\ce{SiO2 + 4F& & -> SiF4 + O2}\label{etc:sio}.
+    \end{alignat}
+\end{subequations}
+However, the reaction probability to the reaction~\ref{etc:sio} is much lower than that of the reaction~\ref{etc:si}~\cite{Knizikevicius_2009}. The rigth set of parameters can lead to a high selective etching~\cite{Frederico_2003}. 
+%https://www.sciencedirect.com/science/article/pii/S0921510797002171
+ 
+The motivation for try different etching process is to determine what one causes less impact in the devices, once, was showed, all of then also etch silicon oxide. The result of each one is presented in the Fig. 
+ 
+ 
+\section{Conclusion}
+

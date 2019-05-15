@@ -19,6 +19,7 @@
 \usepackage{nomencl}
 \makenomenclature
 \usepackage{etoolbox}
+\usepackage[version=3]{mhchem}
 
 %\usepackage{sectsty}
 %\chapterfont{\color{blue}}
@@ -80,6 +81,8 @@
 \rfoot{}
 \pagestyle{fancy}
 \usepackage{calc}     
+    
+\newcommand{\cheeq}[1]{\begin{equation}\ce{#1}\end{equation}}    
     
 \newcommand{\diff}[2]{\dfrac{d #1}{d #2}} %derivada
 \newcommand{\n}{\text{n}}
@@ -188,16 +191,20 @@ Carta de Aprovação
 \include{dis_jhs_cap5}
 \include{dis_jhs_cap6}
 \include{dis_jhs_conc}
-\appendix
-\include{dis_jhs_app1}
-\include{dis_jhs_app2}
 
-\addcontentsline{toc}{chapter}{Referênciasbibliográficas}
+
+\addcontentsline{toc}{chapter}{Bibliography}
 \spacing{1.15}
 {\footnotesize
-%\bibliographystyle{unsrt_short}    %% numero
-%\bibliography{relatorio_cpg}
+\bibliographystyle{unsrt_short}    %% numero
+\bibliography{dis_jhs_bib}
 }
+
+\appendix
+\include{dis_jhs_app1}
+\include{dis_jhs_app3}
+\include{dis_jhs_app2}
+
 
 \end{document}
 
