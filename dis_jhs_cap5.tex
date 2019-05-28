@@ -27,7 +27,7 @@ For a generic problem $\delta\epsilon\ket{\vec{E}}=\ket{\delta\vec{P}}$ is the c
     \vec{E} = \vec{E}_1+\vec{E}_3+c.c.
 \end{equation}
 From now on, the label $1$ refers to the model in the infrared and the label $3$ to the mode in the visible. 
-The calculus of the Eq~\ref{eq:perp_theory} give rise to a total of sixty four terms for each one of the modes, however most of then are not of our interest. In order to filter this terms we will write the electric field with a explicit dependency of time $\vec{E}_\alpha(\vec{r},t) = a_\alpha(t) \vec{e}_\alpha(\vec{r})$. Considering the approximation of slowly variation, the amplitude $a_\alpha(t)$ can be considered as a harmonic function with frequency $\omega_\alpha$. Applying this trick, some terms of the Eq~\ref{eq:perp_theory} can be considered out of frequency and be neglected. The full expression for the perturbation for each mode is
+The calculus of the Eq~\ref{eq:perp_theory} give rise to a total of sixty four terms for each one of the modes; however, most of then are not of our interest. In order to filter this terms we will write the electric field with a explicit dependency of time $\vec{E}_\alpha(\vec{r},t) = a_\alpha(t) \vec{e}_\alpha(\vec{r})$. Considering the approximation of slowly variation, the amplitude $a_\alpha(t)$ can be considered as a harmonic function with frequency $\omega_\alpha$. Applying this trick, some terms of the Eq~\ref{eq:perp_theory} can be considered out of frequency and be neglected. The full expression for the perturbation for each mode is
 
 \begin{eqnarray}
 \frac{\delta\omega_1}{\omega_1} &=& -\frac{1}{8}\left[|a_1|^2\frac{\int\epsilon\chi^{(3)}
@@ -141,7 +141,7 @@ Before to simulate the modes to calculate the overlap integral let's consider th
 \end{equation}
 We define $\Delta m = m_3 -3\times m_1$. 
 
-The result of the integral at far right is a Sinc function of $2\pi\Delta m$. Due to the symmetry of our problem, the value of any $m_\alpha$ is a integer, thus $\Delta m$ is also a integer. The value of the Sinc function goes to zero for any integer $\Delta m$ different from zero, as show in Fig~\subref{fig:toy_model}{a}, therefore the coupling of two modes due third order nonlinearity occurs just if $m_3 = 3\times m_1$, hence $k_3 = 3 \times k_1$. This relation between the constant of propagation is one of the conditions necessary for phase matching, as saw in Chapter~\ref{chap:nonlin_pol}. In order to reach the phase matching we need to set the relation between the frequency of the modes, this is a important statement as we shall see next.  
+The result of the integral at far right is a Sinc function of $2\pi\Delta m$. Due to the symmetry of our problem, the value of any $m_\alpha$ is a integer, thus $\Delta m$ is also a integer. The value of the Sinc function goes to zero for any integer $\Delta m$ different from zero, as show in Fig~\subref{fig:toy_model}{a}; therefore, the coupling of two modes due third order nonlinearity occurs just if $m_3 = 3\times m_1$, hence $k_3 = 3 \times k_1$. This relation between the constant of propagation is one of the conditions necessary for phase matching, as saw in Chapter~\ref{chap:nonlin_pol}. In order to reach the phase matching we need to set the relation between the frequency of the modes, this is a important statement as we shall see next.  
 
 \begin{figure}[t]
     \centering
@@ -160,24 +160,24 @@ We will solve the Coupled Rate Equation using numerical methods. Our problem can
     \end{align}
 \end{subequations}
 
-Initially, lest solve the Eq~\ref{eq:rate_broad} assuming phase matching between the modes, that is, lets consider $\omega_3 = 3\times\omega_1$. The Fig~\subref{fig:temporal_solution}{a}
+Initially, lest solve the Eq~\ref{eq:rate_broad} assuming a initial phase matching between the modes, that is, lets consider $\omega_3 = 3\times\omega_1$. The Fig~\subref{fig:temporal_solution}{a}
 brings a well know bistable curve for the infrared mode (Red) while the Fig~\subref{fig:temporal_solution}{b} 
-shows a slightly deformed lorentzian curve for the visible mode. This curve shape are true just if we assume that $\omega_3 = 3\times\omega_1$, which is not true due to the dispersion of the modes. A more general model assume that $\omega_3 = 3\times\omega_1 + \delta\omega$, in such case, the shape of the curve can be totally changed in function of the value of $\delta\omega$, we call this term frequency detuning. The Fig~\subref{fig:temporal_solution}{c}
+shows a slightly deformed lorentzian curve for the visible mode. This curve shape are true just if we assume that $\omega_3 = 3\times\omega_1$, which is not true due to the dispersion of the modes. A more general model assume that $\omega_3 = 3\times\omega_1 + \delta\omega$, in such case, the shape of the curve can be totally changed in function of the value of $\delta\omega$, we call this term phase detuning (do not mistake with the Detuning $\Delta_\alpha$). The Fig~\subref{fig:temporal_solution}{c}
 shows some case. 
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=16cm]{Dissertation_thg_solution.jpg}
-    \caption{\textbf{Output in Function of the Detuning. a)} The solid line is the infrared transmission. The dashed line represents the initial state of the infrared mode. \textbf{b)} The solid line is the collected visible power (normalized by the optimal value). The dashed line represents the initial state of the visible mode. For this case, the frequency detuning is zero. \textbf{c)} Results for different frequency detuning. Upper $\delta\omega = 2\pi\times2.5$~GHz. Lower $\delta\omega = 2\pi\times1.5$~GHz, which is the close of the optimal case.}
+    \caption{\textbf{Output in Function of the Detuning. a)} The solid line is the infrared transmission. The dashed line represents the initial state of the infrared mode. \textbf{b)} The solid line is the collected visible power (normalized by the optimal value). The dashed line represents the initial state of the visible mode. For this case, the phase detuning is zero. \textbf{c)} Results for different phase detuning. Upper $\delta\omega = 2\pi\times2.5$~GHz. Lower $\delta\omega = 2\pi\times1.5$~GHz, which is the close of the optimal case.}
     \label{fig:temporal_solution}
 \end{figure}
 This dynamics occurs due to the SPM and XPM terms. The displacement from the initial frequency are different for each mode which lead to different phase relation between the modes as long the source frequency is sweep. 
 
-As we saw we Chapter~\ref{chap:optical_cavity} the displacement is direct related with the source power. A careful look to the solution for the Couple Rate Equation show that is always possible to find a situation, tuning both $\delta\omega$ and the power, that lead to a phase matching between the modes at the resonance. In this situation the conversion from the infrared to the visible are optimal. The frequency detuning can be set by changing the temperature of the cavity. 
+As we saw we Chapter~\ref{chap:optical_cavity} the displacement is direct related with the source power. A careful look to the solution for the Couple Rate Equation show that is always possible to find a situation, tuning both $\delta\omega$ and the power, that lead to a phase matching between the modes at the resonance. In this situation the conversion from the infrared to the visible are optimal. The phase detuning can be set by changing the temperature of the cavity. 
 
 The refractive index of the material is a different function of the temperature for which frequency~\needcit, thus changing the temperature of the hole cavity will lead to a different displacement for the frequency infrared than for the visible. 
 
-Let's assume now that for any input power we are able to find a temperature that lead the phase matching to occurs at the resonance. This assumption is similar to assume that the SPM, XPM and frequency detuning are null in the Eq~\ref{eq:rate_broad}. The Fig~\subref{fig:power_solution}{a}
+Let's assume now that for any input power we are able to find a temperature that lead the phase matching to occurs at the resonance. This assumption is similar to assume that the SPM, XPM and phase detuning are null in the Eq~\ref{eq:rate_broad}. The Fig~\subref{fig:power_solution}{a}
 show the value of the ration between the collected visible power and the input power ($|S_3|^2/|S_{in}|$), which we define as Net Efficiency, in function of the input power. We are able to spot a critical power that lead to a maximum Third Harmonic Generation Net Efficiency. Moreover, this maximum is very stable in function of the power, the inset of Fig~\subref{fig:power_solution}{a} show that a variation of hundreds of Watts lead to a variation hundredth of the efficiency. For a specific scenario it is possible to reach a total conversion of photons from the infrared to the visible, the Fig~\subref{fig:power_solution}{b} shows the result considering this condition. 
 
 \begin{figure}[h]
@@ -193,7 +193,7 @@ The most important assumption to reach a total conversion scenario is that the c
 
 In this Chapter we have applied perturbation theory in order to develop a Rate Equation that couple two modes due to third order nonlinearity. This procedure lead us to few new terms, two phase modulation terms, self and cross (SPM and XPM), and the couple terms $B_1$ and $B_3$.
 
-The overlap integral J3, Eq~\ref{eq:overlap_j3}, lead to the relation $m_3 = 3\times m_1$ for the coupled modes, which is necessary for phase matching. Meanwhile, the SPM and XPM displace differently each mode, leading to a frequency detuning of the modes. Nevertheless, as the displacement is a function of both, PM terms and the power, is possible to set specific values of power and initially detuning that lead to a perfect phase matching in the resonance frequency. 
+The overlap integral J3, Eq~\ref{eq:overlap_j3}, lead to the relation $m_3 = 3\times m_1$ for the coupled modes, which is necessary for phase matching. Meanwhile, the SPM and XPM displace differently each mode, leading to a phase detuning of the modes. Nevertheless, as the displacement is a function of both, PM terms and the power, is possible to set specific values of power and initially phase detuning that lead to a perfect phase matching in the resonance frequency. 
 
 If we consider a situation where the system is always in phase matching, the solution of the Coupled Rate Equation show a critical power wheres the efficiency of Third Harmonic Generation is maximized. This maximum occurs in a large band of power.
 

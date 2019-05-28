@@ -20,7 +20,7 @@ A typical optical mode, for a Whispering Gallery Mode (don't worry, it will be c
     E_\text{confined} = \sqrt{\frac{2}{c\text{n}\epsilon_0}\frac{P}{A}} \approx 6 \times 10^7\text{V/m}.
 \end{equation}
 
-Where $\text{n}$ is the refraction index for silicon. Even order of magnitude lower of the atomic electric field, the electric field confined in a optical cavity is high enough to observe nonlinear effects with input power much lower than required for free propagating\needcit. Moreover the recycling of photons lead to a large optical path with small volume, enabling this kind of device efficient for integrated systems~\needcit.  
+Where $\text{n}$ is the refraction index for silicon. Even order of magnitude lower of the atomic electric field, the electric field confined in a optical cavity is high enough to observe nonlinear effects with input power much lower than required for free propagating\needcit. Moreover, the recycling of photons lead to a large optical path with small volume, enabling this kind of device efficient for integrated systems~\needcit.  
 
 Therefore, it is important to understand the behavior of confined optical modes. Lets first introduce the theory for uncoupled mode for a arbitrary mode. Them we consider the nonlinearity of the medium to describe the coupled mode theory, this part will be done in the Chapter~\ref{chap:couple_mode}. 
 
@@ -147,7 +147,7 @@ Where $\nabla_t^2 = \nabla^2 - \partial^2/\partial z^2$.
     \caption{\textbf{a) Whispering Gallery Mode:} Intensity of the electric field. The WGM confine the optical mode in the edges of the cavity. \textbf{b) Wedge Cavity:} Image take from a Scanning Electron Microscope of the cavity used in this study. \textbf{c) Coordinates:} The coordinates of the problem are defined as that. This mode is a TM21 with $m = 526$ and frequency $\omega_\alpha/2\pi = 193.5$~THz}.
     \label{fig:wgm}
 \end{figure}
-It might be have been overlooked, but the Eq~\ref{eq:wave_eq} is a system with 6 equation; one for which field in each coordinate. The solution for this set of equation with boundary condition define the optical modes of our problem. To solve this equations we must apply consideration about symmetry, however we use numerical methods to solve it. We will use the commercial software COMSOL\regmark, in Appendix~\ref{app:Comsol_Solution} we explained step by step how this solutions are done. 
+It might be have been overlooked, but the Eq~\ref{eq:wave_eq} is a system with 6 equation; one for which field in each coordinate. The solution for this set of equation with boundary condition define the optical modes of our problem. To solve this equations we must apply consideration about symmetry; however we use numerical methods to solve it. We will use the commercial software COMSOL\regmark, in Appendix~\ref{app:Comsol_Solution} we explained step by step how this solutions are done. 
 
 Until now we have talk about generic electromagnetic modes, with no spatial boundary condition, in order to define them we must define the geometry of our cavity. Our device are based in disk microcavities, as show in Fig~\subref{fig:wgm}{a}, this kind of resonator presents the so called Whispering Gallery Modes (WGM), due to cylindrical symmetry. In order to archive high life time of the photons inside the cavity we use a wedge cavity. Fig~\subref{fig:wgm}{b} show a photo take using a Scanning Electron Microscope (SEM) of the cavity used in this study, the angle present at edge makes the electric field to be less perpendicular to the surface leading to lower loss due to scattering\needcit. The fabrication process have a important role in here, as we shall see below. 
 
@@ -179,6 +179,7 @@ The $FSR$ is the linear frequency between two consecutive modes, so
 Now we have enough knowledge to understand how to experimentally characterize our devices. The following Section will treat this subject. 
 
 \section{Optical Characterization}
+\label{sec:optical_char}
 
 The mainly parameters of relevance to characterize an optical mode is the losses, which is done be measuring the transmission and compare with the Eq~\ref{eq:single_mode_transmission} from the single mode model. 
 
@@ -207,6 +208,7 @@ The resonance frequency of the cavity are correlated with the refractive index o
         \frac{\Delta\omega_\alpha}{\omega_\alpha} &= -\frac{\Delta \text{n}_\text{eff}}{\text{n}_\text{eff}}\\
         \frac{\Delta\omega_\alpha}{\omega_\alpha} &= -\frac{\int \text{n}^2\vec{e}^*\Delta\text{n}(T)~\vec{e} d^3r}
         {\int \text{n}^2 |\vec{e}|^2 d^3r}
+        \label{eq:termooptc_change}
     \end{alignat}
 \end{subequations}
 Where $T$ are the temperature of the optical mode. In a good approximation, considering a small variation in the temperature, we can write
