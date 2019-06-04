@@ -29,14 +29,20 @@ The experiment is done by sweep the frequency of the source and monitoring the p
 
 The shape of the THG curves is significantly different of those predicted in the Fig.~\ref{fig:temporal_solution}, this is due to the interference between neighboring infrared modes. As the coupling between the cavity and the source must be high in in order to collect more TH, the amount of excited IR modes id high enough to produce a dirty transmission spectrum. 
 
-Now we are interested in control the phase matching condition between the modes by change the phase detuning $\delta_omega$. To change the phase detuning we shall vary the sample temperature and due to a dynamics similar to the presented in the Eq~\ref{eq:termooptc_change}; however, with a external heat source instead of internal one; therefore the Eq~\ref{eq:pertubation_bistaliti_cavity} can by write as 
+Now we are interested in control the phase matching condition between the modes by change the phase detuning $\delta_\omega$. To change the phase detuning we shall vary the sample temperature and due to a dynamics similar to the presented in the Eq~\ref{eq:termooptc_change}; however, with a external heat source instead of internal one; therefore the Eq~\ref{eq:pertubation_bistaliti_cavity} can by write as 
 \begin{equation}
     \frac{\Delta\omega_\alpha}{\omega_\alpha} = \frac{d\text{n}_\alpha}{dt}\Delta T \rightarrow \Delta\delta_\omega = \left(\omega_3\frac{d\text{n}_3}{dt} - 3\omega_1\frac{d\text{n}_1}{dt}\right)\Delta T
     \label{eq:temperature_mode_variation}
 \end{equation}
 the frequency displacement due to the sample temperature is different for each band, leading to a variation in the initial phase detuning, even don't knowing the initial phase detuning $\delta_0$ it is possible to calculate the variation in the phase detuning in function of the temperature and compare the effect over the third harmonic generation. 
 
-The experimental result can be quantitatively compared with the numerical solution of the Eq~\ref{eq:taxa_ir_broad} and Eq~\ref{eq:taxa_vis_broad} for different values of $\delta_\omega$. The result is presented in Fig.. This measurement was made using the piezo frequency control of the laser, preventing the infrared mode to interfere with the neighbors, another technique was to slight increase the diameter of the tapered fiber, in relation with the Fig.~\ref{fig:thg_broad_map}, leading to a decrease in the amount of visible power collected. Another important difference is the use of samples fabricated with lab grown wafer.
+The experimental result can be quantitatively compared with the numerical solution of the Eq~\ref{eq:taxa_ir_broad} and Eq~\ref{eq:taxa_vis_broad} for different values of $\delta_\omega$. The result is presented in Fig.~\ref{fig:thg_control_phase_det}. This measurement was made using the piezo frequency control of the laser, preventing the infrared mode to interfere with the neighbors, another technique was to slight increase the diameter of the tapered fiber, in relation with the Fig.~\ref{fig:thg_broad_map}, leading to a decrease in the amount of visible power collected. Another important difference is the use of samples fabricated with lab grown wafer.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = 16cm]{Dissertation_phase_detuning_comp.jpg}
+    \caption{Caption}
+    \label{fig:thg_control_phase_det}
+\end{figure}
 
 In order to produce a quantitative comparation we need to measured the parameters cited above.  
 
@@ -52,7 +58,13 @@ This experiment is based on the Eq~\ref{eq:single_mode_transmission}, wheres the
 \end{equation}
 To determine the $\Delta T$ an infrared mode was used as probe, the details of the procedure can be find in the Appendix~\ref{app:experiment}.
 
-The Fig. shows the result of the experiment. An infrared mode was characterize using the same procedure, as shown in Fig~a, where we can calculate the losses, $\kappa_1^{(i)} = 940\pm 50$~MHz and $\kappa_1^{(e)} = 180 \pm 6$~MHz, them we compare with the typical characterization (as described in Chapter~\ref{chap:optical_cavity}), show in Fig.~, we have measured $\kappa_1^{(i)} = 910\pm 20$~MHz and $\kappa_1^{(e)} = 173 \pm 2$~MHz, which showed a good agreement between the methods.
+The Fig.~\ref{fig:mode_char_trans} shows the result of the experiment. An infrared mode was characterize using the same procedure, as shown in Fig~a, where we can calculate the losses, $\kappa_1^{(i)} = 940\pm 50$~MHz and $\kappa_1^{(e)} = 180 \pm 6$~MHz, them we compare with the typical characterization (as described in Chapter~\ref{chap:optical_cavity}), show in Fig.~, we have measured $\kappa_1^{(i)} = 910\pm 20$~MHz and $\kappa_1^{(e)} = 173 \pm 2$~MHz, which showed a good agreement between the methods.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = 16cm]{Dissertation_char_vis_trans.jpg}
+    \caption{Caption}
+    \label{fig:mode_char_trans}
+\end{figure}
 
 The results for the visible mode is shown in the Fig~. It was possible to identify three different modes which was fitted with a variation of the Eq~\ref{eq:single_mode_transmission} to include the neighbors~\needcit. We have found the values
 \begin{table}[h]
@@ -73,11 +85,34 @@ This technique characterize both $\kappa_3^{(i)}$ and $\kappa_3^{(e)}$, although
 
 \subsection{Third Harmonic Generation Characterization}
 
+Lets introduce a set of assumptions in order to rewrite the Eq~\ref{eq:taxa_ir_broad} and \ref{eq:taxa_vis_broad}. First, consider the steady state, $\dot{a}_\alpha = 0$, also lets consider that the system is in the resonance of the infrared, $\Delta_1 = \omega_1(A_{11}|a_1|^2+A_{13}|a_3|^2)$ for last we assume that the $a_3$ amplitude is much smaller than $a_1$, then we can write the energy in the visible mode as
+\begin{equation}
+    |a_3|^2 = \frac{|\omega_3 B_3 (a_1)^3|^2}{\left(\kappa_3\right)^2 + \left(\delta_0 - 3(A_{31}-A_{11})|a_1|^2\right)^2}
+    \label{eq:thg_phase_mismatch}
+\end{equation}
 
+The assumption of resonance with the infrared is important to consider all parameters independents of the phase detuning, which lead to a Lorentzian function for the energy stored in the visible mode with the phase detuning as variable. Using the same procedure as before to vary the phase detuning and measuring the third harmonic power generated in the resonance of infrared is possible to determine the total loss $\kappa_3$. The result is shown in the Fig.~\ref{fig:mode_char_thg}.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = 16cm]{Dissertation_char_vis_thg.jpg}
+    \caption{Caption}
+    \label{fig:mode_char_thg}
+\end{figure}
 
+Fitting the result with the Eq.~\ref{eq:thg_phase_mismatch} we determined the total loss as $\kappa_3 = 26$~MHz, which is comparable with the results obtained by the transmission technique. Using the same rate between the coupling and the intrinsic loss, we can estimate the values $\kappa_3^{(i)} = 8$~MHz and $\kappa_3^{(e)}=11$~MHz. 
 
-\section{Modes Identification}
-%Descrevo a comparação entre as medidas de dispersão e as simulações. Acredito que a parte de validação da simulação pode entrar como um apêndice. 
+An natural conclusion is think that is possible to use the Eq.~\ref{eq:out_wave} simultaneously with Eq.\ref{eq:thg_phase_mismatch} to, using a fit, determine the coupling rat; however, the fit would calculate the whole numerator, in other word, the fit determine the value of $\kappa_3^{(e)}|\omega_3 B_3 (a_1)^3|^2$, to use this information to infer the coupling rate we must first know the Coupling term $B_3$ and the infrared mode amplitude $a_1$, both aren't possible to directly measure which makes this procedure complicated and fragile due to errors propagation. 
+
+In order to get a reliable estimate we must determine the Coupling term. As already seen, this term depends on the spatial distribution of the mode, which can't be measured but is calculated using simulation.
+
+\section{Coupling Term Estimate}
+
+The coupling terms $B_1$ and $B_3$ can't be directly measured. One way to estimate their values is be simulate the both modes, using Finite Element Method, to determine the spatial distribution and calculate the overlap integral, Eq.\ref{eq:overlap_j3}.
+
+The simulation was made using the software COMSOL\regmark. Initially we calculate the dispersion of group of modes (10 modes for infrared and 100 for visible). We could calculate the Coupling Term between all of this modes, leading to a matrix if 10$\times$100 elements; however, most of the pair of modes can not coupling due to the phase matching condition. To filter we must assume that $3\times m_1 = m_3$. Also, we consider a finite linewidth for the mode. 
+
+%There is a important subtlety when considered the phase matching to filter the modes. The linewidth showed in the transmission spectrum is a characteristic of the system 'cavity+taper' and not of the laser source, in fact the laser source is narrow enough to be considered single frequency when compared with the mode. The process is depicted in the Fig.. The photons of the laser (red line) confined in a infrared mode (dashed red line) will interact with the material of the cavity and will be scattered with exactly three times the frequency of the source creating the green line, which can be confined in a visible mode since it 
+
 
 \section{THG Efficiency Mapping}
 %Acho que não tem muito segredo nessa sessão. 
