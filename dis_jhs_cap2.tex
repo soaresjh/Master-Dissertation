@@ -1,11 +1,10 @@
 \chapter{Nonlinear Optics}
-\label{chap:nonlin_pol}
-%Descrição de polarização não-linear, potencial atómico. Descrição no bulk de geração de terceiro harmônico. 
-The model for nonlinear optical effects, as third harmonic generation, is already well-founded in literature. However, in this Chapter we will describe the model for Harmonic Generation in a bulk material. Also, we shall look for the propagation of two wave coupled due to optical nonlinearity. This concepts shall be very useful to understand the dynamic of the generation of third harmonic in optical cavities.  
+\label{chap:2_nonlin_pol}
+The model for nonlinear optical effects, as third harmonic generation, is already well-known in literature~\cite{Boyd2003}. However, in this Chapter we will describe the model for Harmonic Generation in a bulk material. Also, we shall look for the propagation of two waves coupled due to optical nonlinearity. This concepts shall be very useful to understand the dynamic of the generation of third harmonic in optical cavities.  
 
 \section{Optical Polarization}
 \label{sec:Optical_nonlinear}
-An important subject of optical science to describe the interaction between light and matter is the existence of dipole moment per unit volume, which is called polarization. In a dielectric medium the polarization occurs mainly due induced dipoles.
+An important subject of optical science to describe the interaction between light and matter is the existence of dipole moment per unit volume, which is called polarization. In a dielectric medium the polarization occurs mainly due to induced dipoles.
 
 \begin{figure}[h!]
     \centering
@@ -13,12 +12,12 @@ An important subject of optical science to describe the interaction between ligh
     \caption{\textbf{a) Atom in equilibrium:} the spherical symmetry of the atom makes it neutral for any external electric field. \textbf{b) Atom out of equilibrium:} If a strong enough external electric field are applied, it cause a displacement $x$ which generate a dipole with moment proportional on $x$. \textbf{c) Interatomic potential:} For a small displacement $x$ it is possible to approach the potential as an parable.}
     \label{fig:polarization}
 \end{figure}
-Lets consider a neutral atom placed in an external electric field $\vec{E}$. If the external electric field is negligible when compared with the internal electric field the problem is analogous to the a solid spherical body charged with charge $q$ surrounded with a shell of charge $-q$, the spherical configuration, as show in Fig~\subref{fig:polarization}{a}, lead to a null total electric charge\needcit. However, the electron are free to move in the electronic cloud, if the electric field is high enough it allow a slight displacement in the equilibrium position of the electrons, creating a ionized dipole, as shown in Fig~\subref{fig:polarization}{b}. It is easy to show that the dipole moment is proportional to displacement distance with the form
+Lets consider a neutral atom placed in an external electric field $\vec{E}$. If the external electric field is negligible when compared with the internal electric field the initial equilibrium position is the concentric configuration, as shown in Fig.~\ref{fig:polarization}, this problem is analogous to the a solid spherical body charged with charge $q$ surrounded with a shell of charge $-q$. In a semiclasical approach we can consider all the charge concentrated in the center of each part~\cite{Griffiths2005}, which lead to a null total electric charge, hence to non electric field. However, the electron are free to move and thus the external electric field is able to displace the electron from the equilibrium position, creating a ionized dipole as shown in Fig.~\subref{fig:polarization}{b} (We consider that the external electric field isn't strong enough to deform the electronic cloud). It is easy to show that the dipole moment is proportional to displacement distance with the form~\cite{Griffiths2005}
 \begin{equation}
     \vec{p} = q\vec{x}.
 \end{equation}
 
-When a weak external electric field is considered (if compared with the atomic electric field), we can approach the atomic potential to a parabolic, as show in Fig~\ref{fig:polarization}c. The restoring force; therefore, is linear with distance. In such model, the polarization $\vec{p}$ is linear with the external electric field
+When the external electric field is weak if compared with the interatomic electric field, we can approach the atomic potential to a parabolic, as show in Fig.~\ref{fig:polarization}c. The restoring force; therefore, is linear with distance. In such model, the polarization $\vec{p}$ is linear with the external electric field
 \begin{equation}
     \vec{p} = \alpha \vec{E}.
 \end{equation}
@@ -52,7 +51,7 @@ where $a$ and $b$ are parameters that characterizes the strength of the nonlinea
     \caption{\textbf{a) Harmonic expansion:} The assumption of a parabolic potential are only valid if the Electron displacement are small when compared with the atom radius.\textbf{b) Anharmonic expansion:} Consider high order therms, anharmonic therms, for the expansion of the potential lead to a well agreement even when considered higher displacement.}
     \label{fig:expanssion}
 \end{figure}
-We can solve Eq.\ref{eq:motion_equation_electron} applying perturbation theory. Lets replace $E(t)$ by $\lambda E(t)$, %REWRITE: I must check Boyd calculus
+Eq.\ref{eq:motion_equation_electron} can be solved for using perturbation theory. Lets replace $E(t)$ by $\lambda E(t)$, %REWRITE: I must check Boyd calculus
 \begin{equation}
     \ddot{x'} + 2\gamma\dot{x'} + \omega_0^2x'+ax'^2+bx'^3 = -\lambda eE(t)/m,
     \label{eq:pertubed_equation_electron}
@@ -71,7 +70,7 @@ This procedure give us a set of equations.
     \end{align}
 \end{subequations}
 
-It is easy to see that the first order equation, Eq \ref{eq:first_order_pertubation}, is a problem of a forced harmonic oscillator. If considered a harmonic electric field with module $E(t) = Ee^{-i\omega t}$, for the steady-state we have
+It is easy to see that the first order equation, Eq.~\ref{eq:first_order_pertubation}, is a problem of a forced harmonic oscillator. If considered a harmonic electric field with module $E(t) = Ee^{-i\omega t}$, for the steady-state we have
 \begin{equation}
     x'^{(1)}(t) = \tilde{x}^{(1)}e^{-i\omega t}.
 \end{equation}
@@ -81,7 +80,7 @@ The amplitude have the form
 \end{equation}
 The function $B(\omega)$ are defined as $B(\omega) = \omega_0^2-\omega^2-2i\omega\gamma$.
 
-Now we are able to rewrite the Eq \ref{eq:second_order_pertubation} using the term in $x'^{(1)}$ as a driving force, which give us
+Now we are able to rewrite Eq.~\ref{eq:second_order_pertubation} using the term in $x'^{(1)}$ as a driving force, which give us
 \begin{equation}
     \ddot{x'}^{(2)} + 2\gamma\dot{x'}^{(2)} + \omega_0^2x'^{(2)} = a\left(\tilde{x}^{(1)}\right)^2e^{-i2\omega t}.
     \label{eq:second_order_motion_eq}
@@ -89,7 +88,7 @@ Now we are able to rewrite the Eq \ref{eq:second_order_pertubation} using the te
 
 Here we get a interesting result. Our system was initially drove by a harmonic force with frequency $\omega$, the anharmonicity of the interatomic potential bring forth a driven force with frequency $2\omega$. 
 
-The steady-state solution of the Eq~\ref{eq:second_order_motion_eq} have the form
+The steady-state solution of Eq.~\ref{eq:second_order_motion_eq} have the form
 \begin{equation}
     x'^{(2)}(t) = \tilde{x}^{(2)}e^{-i2\omega t}.
 \end{equation}
@@ -98,7 +97,7 @@ with the amplitude given by
     \tilde{x}^{(2)} = -\frac{a\left(eE\right)^2}{m^2B(\omega)^2B(2\omega)}.
 \end{equation}
 
-The same procedure for Eq \ref{eq:thirdt_order_pertubation} give us a perturbation with frequency $3\omega$, with the form 
+The same procedure for Eq.~\ref{eq:thirdt_order_pertubation} give us a perturbation with frequency $3\omega$, with the form 
 \begin{equation}
     x'^{(3)}(t) = \tilde{x}^{(3)}e^{-i3\omega t},
 \end{equation}
@@ -107,7 +106,7 @@ with amplitude
     \tilde{x}^{(3)} = -\frac{\left(eE\right)^3}{m^3B(\omega)^3B(3\omega)}\left(b+\frac{2a ^2}{B(2\omega)}\right).
 \end{equation}
 
-The Eq \ref{eq:x_pertubation_expanssion} now give us a important insight. Even though the drive force due the external electric field beeing well defined with frequency $\omega$, the solution for the motion of the electron around the rest position gives us an harmonic series
+Eq.~\ref{eq:x_pertubation_expanssion} now give us a important insight. Even though the drive force due the external electric field is well defined with frequency $\omega$, the solution for the motion of the electron around the rest position gives us an harmonic series
 \begin{equation}
     x'(t) = \lambda \tilde{x}^{(1)}e^{-i\omega t} + \lambda^2 \tilde{x}^{(2)}e^{-i2\omega t} + \lambda^3 \tilde{x}^{(3)}e^{-i3\omega t} +....
 \end{equation}
@@ -130,7 +129,7 @@ The main reason behind the math showed in this section is to make clear and intu
 \section{Wave Equation}
 \label{sec:wave_equation}
 
-We have looked in how the interaction between a harmonic wave electromagnetic wave and a nonlinear material generate high order harmonics. Lets now suppose the existence of two waves with different frequency and consider the effect of polarization upon the wave equation for a nonlinear optical medium. 
+We have looked on how the interaction between a harmonic wave electromagnetic wave and a nonlinear material generate high order harmonics. Lets now suppose the existence of two waves with different frequency and consider the effect of polarization upon the wave equation for a nonlinear optical medium~\cite{Boyd2003}. 
 
 Starting with Maxwell's equations
 
@@ -154,9 +153,9 @@ We consider a nonmagnectic material, hence
 %\begin{equation}
 %    \vec{D} = \epsilon_0\vec{E} + \vec{P}
 %\end{equation}
-%where $\vec{P}$ are given by Eq \ref{eq:nonlim_pol}.
+%where $\vec{P}$ are given by Eq.~\ref{eq:nonlim_pol}.
 %
-Applying some math, we can then rewrite the Maxwell's equations in wave equation form for the electric field 
+In the absence of free charges and currents, we can then rewrite the Maxwell's equations in wave equation form for the electric field 
 \begin{equation}
     \nabla^2\vec{E} - \frac{1}{\epsilon_0 c^2}\frac{\partial^2}{\partial t^2}\vec{D} = 0
 \end{equation}
@@ -167,7 +166,7 @@ Finally, considering an nonmagnetic and nonlinear medium we can write the electr
         \vec{P} &= \vec{P}^{(1)} + \vec{P}^{(NL)}.
     \end{align}
 \end{subequations}
-In order to simplify the math, we split the polarization vector $\vec{P}$ in a linear part, given by $\vec{P}^{(1)} = \epsilon_0\chi^{(1)}\vec{E}$, and a nonlinear part $\vec{P}^{(NL)}$ given by all the remaining nonlinear terms of the Eq~\ref{eq:nonlim_pol}, so we have
+In order to simplify the math, we split the polarization vector $\vec{P}$ in a linear part, given by $\vec{P}^{(1)} = \epsilon_0\chi^{(1)}\vec{E}$, and a nonlinear part $\vec{P}^{(NL)}$ given by all the remaining nonlinear terms of Eq.~\ref{eq:nonlim_pol}, so we have
 
 \begin{equation}
     \nabla^2\vec{E} +\frac{\n^2}{c^2}\frac{\partial^2}{\partial t^2}\vec{E} = -\frac{1}{\epsilon_0 c^2} \frac{\partial^2}{\partial t^2}\vec{P}^{NL}.
@@ -199,13 +198,13 @@ We are assuming that there is no other process beside second harmonic generation
 \begin{subequations}
     \begin{alignat}{1}
         \vec{P}^{(2)} &= \vec{P}^{(2)}_1+\vec{P}^{(2)}_2\\
-        \text{With   }\vec{P}^{(2)}_\alpha &= P^{(2)}_\alpha e^{-i\omega_\alpha t}\hat{z}+c.c., \text{ for $\alpha$ = 1,2}.
+        \vec{P}^{(2)}_\alpha &= P^{(2)}_\alpha e^{-i\omega_\alpha t}\hat{z}+c.c., \text{ for $\alpha$ = 1,2}.
     \end{alignat}
     \label{eq:nonlinear_polarization_harmonic_form}
 \end{subequations}
-%Due to the harmonic time dependence of the field, we can use $\frac{\partial}{\partial t} = -i\omega$, then the Eq~\ref{eq:wave_equation_nonlinear} can be write for each frequency, 
+%Due to the harmonic time dependence of the field, we can use $\frac{\partial}{\partial t} = -i\omega$, then Eq.~\ref{eq:wave_equation_nonlinear} can be write for each frequency, 
 
-The left side of the Eq~\ref{eq:wave_equation_nonlinear} are compound by linear operator, we can write it as the sum of two equations. On the other hand, the left side of Eq~\ref{eq:wave_equation_nonlinear} is, obviously, nonlinear which lead us to a system of two equation by equalize the terms with the same time dependency  
+The left side of Eq.~\ref{eq:wave_equation_nonlinear} are composed by linear operators, we can write it as the sum of two equations. On the other hand, the left side of Eq.~\ref{eq:wave_equation_nonlinear} is, obviously, nonlinear which lead us to a system of two equation when arranging the therms with same harmonic the terms with the same time dependency  
 \begin{subequations}
     \begin{alignat}{1}
         \frac{\partial^2}{\partial z^2}\vec{E}_1 +\frac{\omega_1^2}{c^2}\n_1^2 \vec{E}_1 = -\frac{\omega_1^2}{\epsilon_0 c^2} \vec{P}^{(2)}_1 \\
@@ -213,7 +212,7 @@ The left side of the Eq~\ref{eq:wave_equation_nonlinear} are compound by linear 
     \end{alignat}
 \end{subequations}
 
-Calculating the Eq~\ref{eq:nonlinear_polarization} and Eq~\ref{eq:total_field}, comparing with Eq~\ref{eq:nonlinear_polarization_harmonic_form} it is possible, and quit easy, to find that
+Calculating Eq.~\ref{eq:nonlinear_polarization} and Eq.~\ref{eq:total_field}, comparing with Eq.~\ref{eq:nonlinear_polarization_harmonic_form} it is possible, and quit easy, to find that
 \begin{subequations}
     \begin{align}
         P^{(2)}_1 &= 2\epsilon_0\chi^{(2)} A^*_1 A_2e^{i(k_2-k_1)z}\\
@@ -222,7 +221,7 @@ Calculating the Eq~\ref{eq:nonlinear_polarization} and Eq~\ref{eq:total_field}, 
 \end{subequations}
 
 
-We can now cancel the time exponential in both equations and, just in order to simplify, suppress the vectorial notation. The full system of propagating wave equations are give by 
+We can now analyze each frequency component, and simplify the equations by suppressing the vectorial notation. The full system of propagating wave equations are give by 
 %\begin{subequations}
 %    \begin{align}
 %       \frac{\partial^2}{\partial z^2}A_1e^{ik_1z} +\frac{\omega_1^2}{c^2}\n_1^2 A_1e^{ik_1z} &= -2\frac{\omega_1^2 \chi^{(2)}}{\epsilon_0 c^2} A^*_1 A_2e^{-i\Delta kz}\\
@@ -241,23 +240,23 @@ Here was defined the phase mismatch between the waves as
     \Delta k = 2k_1 - k_2.
 \end{equation}
 
-The Eq~\ref{eq:coupled_wave_equation_SHC} give us a solidi notion on how the amplitude of the wave, especially the second harmonic, depends on the phase mismatch. 
+Eq.~\ref{eq:coupled_wave_equation_SHC} give us how the amplitude of the wave, especially the second harmonic, depends on the phase mismatch. 
 
-Solution for coupled-wave equation have already been demonstrated; however, we are not interested in a analytic form for the amplitude hence the system Eq~\ref{eq:coupled_wave_equation_SHC} was solved using numerical methods.
+Solution for coupled-wave equation have already been demonstrated; however, we are not interested in a analytic form for the amplitude, we ended up solving Eq.~\ref{eq:coupled_wave_equation_SHC} using numerical methods.
 
-\begin{figure}[h!]
+\begin{figure}[th!]
     \centering
     \includegraphics[width = 16cm]{figuras/Dissertation_coppled_eq_sol.jpg}
     \caption{\textbf{Coupled-wave equation numerical solution: a)} Modulus of the second harmonic amplitude, $|A_2|$, in function of $\Delta k \times l$ for $z = l$. \textbf{b)} Modulus of the second harmonic amplitude, $|A_2|$, in function of $z = l$ for different values of $\Delta k \times l$.}
     \label{fig:model_solution}
 \end{figure}
 
-In order to normalize the equations I define $l$ as the distance where, for $\Delta k = 0$, the amount of $75\%$ of the energy in the fundamental mode have been transferred for the second harmonic mode. 
+In order to normalize the equations we define $l$ as the distance where, for $\Delta k = 0$, $75\%$ of the energy in the fundamental mode have been transferred for the second harmonic mode. 
 
-Analysing the results presented in Fig~\ref{fig:model_solution} it is possible observe two interesting, and indeed important, behaviors. The graphic Fig~\subref{fig:model_solution}{a} shows that the amount of energy in the second harmonic model is maximum for $\Delta k = 0$; moreover, the Fig~\subref{fig:model_solution}{b} shows that the stand steady are only reached for $\Delta k = 0$, any other value of $\Delta k$ lead to an oscillation in function of the propagation distance.
+Analysing the results presented in Fig.~\ref{fig:model_solution} it is possible observe two interesting, and indeed important, behaviors. Fig.~\subref{fig:model_solution}{a} shows that the amount of energy in the second harmonic model is maximum for $\Delta k = 0$; moreover, Fig.~\subref{fig:model_solution}{b} shows that the steady state are only reached for $\Delta k = 0$, any other value of $\Delta k$ lead to an oscillation as a function of the propagation distance.
 
 \section{Conclusion}
-Despite the focus of this project not to mathematically describe properties of material nor the propagation of coupled waves, we use this chapter to presents some quietly superficial math to reach two important conclusions.
+Despite the focus of this project was not mathematically describe properties of material nor the propagation of coupled waves, we use this chapter to presents some quietly superficial math to reach two important conclusions.
 
 First, we got from Sec~\ref{sec:Optical_nonlinear} that the wave generated due to second order nonlinearity presents exactly twice of the fundamental frequency, and this result come just from the interaction between the light and matter. 
 
@@ -268,10 +267,10 @@ Second, the Sec~\ref{sec:wave_equation} show us that an efficient conversion req
 %
 Both conclusions will be better applied when we look for third harmonic generation in  modes confined in cavities. 
 
-This result can be analogously make for third harmonic; however, it will give rinse for two additional terms responsible for a effect known as Kerr effect\needcit. Due to third order nonlinearity the refractive index of the material change in amount proportional of the intensity of the electric field
+This result can be analogously make for third harmonic; however, it will give rinse for two additional terms responsible for a effect known as Kerr effect\cite{Barclay2005}. Due to third order nonlinearity the refractive index of the material change in amount proportional of the intensity of the electric field
 \begin{equation}
     \text{n}(\omega_\alpha) = \text{n}_\alpha + \sum^{\beta=1,3} \text{n}_\beta |E_\beta|^2
     \label{eq:kerr_effect_free_wave}
 \end{equation}
 
-When considered, in typical laboratory condition, the Kerr effect includes a perturbation in the second term of the left side of Eq~\ref{eq:wave_equation_nonlinear}. this Chapter was not interesting for us to study this perturbation. The fallowing Chapter shall give us a more practical view of this effect.
+When considered, in typical laboratory condition, the Kerr effect includes a perturbation in the second term of the left side of Eq.~\ref{eq:wave_equation_nonlinear}. The following Chapter shall give us a more practical view of this effect.

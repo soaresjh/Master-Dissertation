@@ -1,34 +1,29 @@
 \chapter{Optical Microcavity}
-\label{chap:optical_cavity}
-%Descrição teórica do caso geral. O objetivo aqui é deixa claro o conceito de modos, modo azimutal, dispersão da cavidade, autovalor e autovetor. Assim, quando eu falar sobre os modos acoplados a ideia de perturbação no autoestado fica mais facil de entender. 
-%
-%Talvez uma descrição mais detalhada sobre a fase acumulada ajude na hora de falar sobre o phase matching, por outro lado pode ser uma descrição fundamental demais. 
-%
-%Também faz parte dessa sessão o experimento de caracterização. Acho que não tem muita necessidade de entrar em detalhes aqui e, se for o caso, podemos aproveitar o apêndice para informações mais técnicas (como fabricação do taper por exemplo). 
+\label{chap:3_optical_cavity}
 
-The last Chapter gave us two condition to optimize the Second Harmonic Generation, both are applicable for Third Harmonics\needcit. It is desirable a long length of propagation, according with the Fig~\subref{fig:model_solution}{b}, and demand high electric fields when compared with the atomic electric field, as show in Fig~\ref{fig:expanssion}. Just in order to compare, a silicon atom \footnote{We used a silicon atom as example just to simplify the atomic model, our cavities aren't build in silicon} has a atomic radius ($\rho_0$) of about $210$~pm and the atomic number of 14, with enable us to estimate   
+The last Chapter gave us two condition to optimize the Second Harmonic Generation, both are applicable for Third Harmonics\cite{Boyd2003}. It is desirable a long length of propagation, according with the Fig~\subref{fig:model_solution}{b}, and demand a large electric fields when compared with typical laboratory condition~\cite{Grubsky2005}. To compare, a silicon atom \footnote{We used a silicon atom as example just to simplify the atomic model, our cavities aren't build in silicon} has a atomic radius ($\rho_0$) of about $210$~pm and the atomic number of 14, with enable us to estimate   
 \begin{equation}
    E_\text{atomic} = -\frac{1}{4 \pi \epsilon0}\frac{Z e^-}{\rho_0^2} %\approx 1.4\times10^{-9}\frac{Z}{\rho_0^2} 
     \approx 4.5\times10^{11}\text{V/m}.
 \end{equation}
 
-%The approach we applied in order to reach some comparable electric field is confine it in a optical cavity. 
-Both issue can be solved using optical cavity. By recycle the photons trapped inside and confine they in a small space, the optical cavity enable to reach a high circulating power in a small effective area, lead to high optical intensity hence high electric field. 
+An approach to overpass this problem is using optical cavity. By recycle the photons trapped inside and confine them in a small space, the optical cavity enable to reach a large circulating power in a small effective area, which lead to high optical intensity and electric field. 
 
-A typical optical mode, for a Whispering Gallery Mode (don't worry, it will be clear further) cavity with about $100~\mu$m of radius, presents a effective area ($A$) of around $10~\mu$m and enable circulating power ($P$) as high as $1$~KW. We can estimate the electric field confined in a silicon cavity (just to compare) as 
+A typical optical mode, for a Whispering Gallery Mode (don't worry, it will be clear further) cavity with about $100~\mu$m of radius, presents a effective area ($A$) of around $10~\mu$m$^2$ and enable circulating power ($P$) as high as $1$~kW. We can estimate the electric field confined in a silicon cavity as 
 \begin{equation}
     E_\text{confined} = \sqrt{\frac{2}{c\text{n}\epsilon_0}\frac{P}{A}} \approx 6 \times 10^7\text{V/m}.
 \end{equation}
 
-Where $\text{n}$ is the refraction index for silicon. Even order of magnitude lower of the atomic electric field, the electric field confined in a optical cavity is high enough to observe nonlinear effects with input power much lower than required for free propagating\needcit. Moreover, the recycling of photons lead to a large optical path with small volume, enabling this kind of device efficient for integrated systems~\needcit.  
+Where $\text{n}$ is the refraction index for silicon. Although it is order of magnitude lower than the interatomic electric field, the electric field confined in a optical cavity is high enough to observe nonlinear effects with input power much lower than required for non-resonate systems~\cite{Carmon2006,Farnesi2014,Chen-jinnai2012}. Moreover, the recycling of photons lead to a large optical path with small volume, enabling this kind of device efficient for integrated systems~\cite{Surya2018, Yang2018}.  
 
-Therefore, it is important to understand the behavior of confined optical modes. Lets first introduce the theory for uncoupled mode for a arbitrary mode. Them we consider the nonlinearity of the medium to describe the coupled mode theory, this part will be done in the Chapter~\ref{chap:couple_mode}. 
+Therefore, it is important to understand the behavior of confined optical modes. Lets first introduce the theory for uncoupled mode for a arbitrary optical mode. Them we consider the nonlinearity of the medium to describe the coupled mode theory in the Chapter~\ref{chap:5_couple_mode}. 
 
 \section{Single Mode Theory}
+\label{sec:single_mode}
 
 Considering a slowly varying envelop for the electromagnetic field, it is possible to write they as separable time and space function
 \begin{equation}
-    \genfrac{}{}{0 pt}{}{\vec{E}(\vec{r},t)}{\vec{H}(\vec{r},t)} = \sum_\alpha a_\alpha(t)\genfrac{(}{)}{0 pt}{}{\vec{e}_\alpha(\vec{r})}{\vec{h}_\alpha(\vec{r})}.
+    \genfrac{(}{)}{0 pt}{}{\vec{E}(\vec{r},t)}{\vec{H}(\vec{r},t)} = \sum_\alpha a_\alpha(t)\genfrac{(}{)}{0 pt}{}{\vec{e}_\alpha(\vec{r})}{\vec{h}_\alpha(\vec{r})}.
     \label{eq:general_mode}
 \end{equation}
 Each pair ($\vec{e_\alpha},\vec{h_\alpha}$) describe the spatial distribution of the $\alpha$th\footnote{$\alpha$ are a label and can assume any form, not necessary numerical} harmonic mode of frequency $\omega_\alpha$, hence 
@@ -61,7 +56,7 @@ normalized by the energy stored in each mode, we them have
 %\end{equation}
 %wheres we normalized in suck way that $|a_\alpha|^2$ give the total energy stored in the $\alpha$th mode.
 
-In order to compare our model with a real system, we shall introduce losses and source, as long some know phenomena, in Eq~\ref{eq:rate_equation_1}; We going to do both phenomenologically.
+In order to compare our model with a real system, we shall introduce losses and source in Eq~\ref{eq:rate_equation_1}; We going to do both phenomenologically.
 
 We will consider that the loss in energy is proportional to the stored energy inside the cavity. Moreover, a source can be included as a combination in current and charge densities in Maxwell's equations, which is analogous to include a polarization term, $\vec{P}_{in}$, to the total polarization. The time dependence of $\vec{P}_{in}$ has to do only with the source, being independent of the intracavity fields.
 
@@ -86,7 +81,7 @@ In typical laboratory condition, $S_{in}(t)$ correspond to a narrow spectral dis
     \dot{a}_\alpha = -\left(i\Delta_\alpha +\frac{\kappa_\alpha}{2}\right)a_\alpha +\sqrt{\kappa^{(e)}_\alpha}S_{in}.
     \label{eq:rate_equation_unperturbed}
 \end{equation}
-where $\Delta_\alpha = \omega_\alpha - \omega$ is called the detuning.
+where $\Delta_\alpha = \omega_\alpha - \omega$ is the detuning between the laser source and the cavity resonance frequency.
 \begin{figure}[t!]
     \centering
     \includegraphics[width = 16cm]{Dissertation_rate_equation.jpg}
@@ -94,9 +89,9 @@ where $\Delta_\alpha = \omega_\alpha - \omega$ is called the detuning.
     \label{fig:rate_equations_single_mode}
 \end{figure}
 
-The Eq~\ref{eq:rate_equation_unperturbed} accepts harmonic solutions with frequency $\Delta_\alpha$. Nevertheless these solutions decay, with a  $\kappa_\alpha/2$ rate, into a steady state solution. We usually operates the system in a time scale much larger than $\kappa^{-1}$, thus we consider just the steady state solution, as show in Fig~\subref{fig:rate_equations_single_mode}{a}
+Eq~\ref{eq:rate_equation_unperturbed} accepts harmonic solutions with frequency $\Delta_\alpha$. Nevertheless these solutions decay, with a  $\kappa_\alpha/2$ rate, into a steady state solution. We usually operates the system in a time scale much larger than $\kappa^{-1}$, thus we consider just the steady state solution, as show in Fig~\subref{fig:rate_equations_single_mode}{a}
 
-We have already introduced the required formalism to describe our problem, at this point a more pictorial view of it would be very useful. For that we shall use the Fig~\subref{fig:rate_equations_single_mode}{b}. Lets consider our system composed by a optical cavity and a source. This cavity have a optical mode with amplitude $a_\alpha$, and present intrinsic energy loss $\kappa_\alpha^{(i)}$ due scattering and absorption. The source carry a input wave $S_{in}$ at frequency $\omega$ which couple with the cavity at a $\kappa_\alpha^{(e)}$ rate, the optical mode couple back with the source at the same frequency, in such way that this couple is seen as a loss channel. The outgoing wave, defined as $S_\alpha$, carry information about the source and the optical mode, in this way
+We have already introduced the required formalism to describe our problem, at this point a more pictorial view of it would be very useful. For that we shall use the Fig~\subref{fig:rate_equations_single_mode}{b}. Lets consider our system composed by a optical cavity and a source. This cavity have a optical mode with amplitude $a_\alpha$, and present intrinsic energy loss $\kappa_\alpha^{(i)}$ due scattering and absorption. The source carry a input wave $S_{in}$ at frequency $\omega$ which couple with the cavity at a $\kappa_\alpha^{(e)}$ rate, the optical mode coupling back with the source at the same frequency, in such way that this couple is seen as a loss channel by the cavity. The outgoing wave, defined as $S_\alpha$, carry information about the source and the optical mode, in this way
 \begin{equation}
     S_\alpha = S_{in} - \sqrt{2 \kappa_\alpha^{(e)}}a_\alpha.
 \end{equation}
@@ -106,7 +101,7 @@ For the steady state solution we have $\dot{a} = 0$, which lead us to define the
     \label{eq:single_mode_transmission}
 \end{equation}
 
-Typically, the experiment are made by sweep the source frequency, hence the detuning. The ration between the intrinsic loss and the coupling loss define the regime of the system; under coupled, for $\kappa_\alpha^{(e)} < \kappa_\alpha^{(i)}$, critical coupled, for $\kappa_\alpha^{(e)} = \kappa_\alpha^{(i)}$, and over coupled, for $\kappa_\alpha^{(e)} > \kappa_\alpha^{(i)}$; the comparison for each regime can be seen in the Fig~\subref{fig:rate_equations_single_mode}{c} 
+Typically, the experiment are made by sweep the source frequency, hence the detuning. The ration between the intrinsic loss and the coupling loss define the regime of the system; under coupled, for $\kappa_\alpha^{(e)} < \kappa_\alpha^{(i)}$, critical coupled, for $\kappa_\alpha^{(e)} = \kappa_\alpha^{(i)}$, and over coupled, for $\kappa_\alpha^{(e)} > \kappa_\alpha^{(i)}$; a comparison between each regime can be seen in the Fig~\subref{fig:rate_equations_single_mode}{c} 
 
 As the capacity of recycle photons inside the optical cavity is a important feature, we should use a value to determine how efficiently our cavity does it. For this purpose we define the Finesse as the ratio between the mean lifetime of the photon inside the cavity and the round trip time, or in function of measurable parameters 
 \begin{equation}
@@ -115,9 +110,9 @@ As the capacity of recycle photons inside the optical cavity is a important feat
 \end{equation}
 Where $FSR_\alpha$ is the Free Spectral Range of the $\alpha$th mode. Then the intracavity power is equal the input power time $\mathcal{F}$.
 
-However, for our system the round trip time and the mean lifetime are coupled, in the sense that we aren't able to increase or decrease the round trip time without affect the mean lifetime, hence we define the Quality factor ($Q$) as the ration between the frequency of the mode ($\omega_\alpha$) and the bandwidth ($\kappa_\alpha$) to determine the efficiency of our cavity to store photons, supposing that the $FSR_\alpha$ are nearly the same. 
+However, for our system the round trip time and the mean lifetime are coupled, in the sense that we aren't able to increase or decrease the round trip time without affect the mean lifetime, hence we define the Quality factor ($Q$) as the ration between the resonance frequency of the mode ($\omega_\alpha$) and the bandwidth ($\kappa_\alpha$) to determine the efficiency of our cavity to store photons, supposing that the $FSR_\alpha$ are nearly the same. 
 
-In order to better understand the concept of Free Spectral Range and how do it lead us to the round trip time I must develop the spatial treatment of the modes. 
+In order to better understand the concept of Free Spectral Range and how do it lead us to the round trip time we must develop the spatial treatment of the modes. 
 \subsection{Spatial Equations}
 
 Initially lets consider a propagating wave at frequency $\omega$. From the Maxwell's equations it is possible to write
@@ -128,7 +123,7 @@ Initially lets consider a propagating wave at frequency $\omega$. From the Maxwe
     \end{alignat}
     \label{eq:wave_eq_full}
 \end{subequations}
-Here I defined $\beta = \omega/c$, where $c$ is the speed of light in the vacuum. As the medium that we are interested presents uniform refraction index, the right side of the equation are null. 
+Here we defined $\beta = \omega/c$, where $c$ is the speed of light in the vacuum. As the medium that we are interested presents uniform refraction index, we can solve Eq~\ref{eq:wave_eq_full} separately for the region inner and outer of the cavity, them match the boundaries conditions, in such case the right side of the equation are null for each region. 
 
 We shall assume that the solution is a wave that propagate in $z$ direction with the form $e^{ik_\alpha z}$, hence the Eq~\ref{eq:wave_eq_full} can be rewrite as 
 
@@ -150,18 +145,16 @@ Where $\nabla_t^2 = \nabla^2 - \partial^2/\partial z^2$.
 It might be have been overlooked, but the Eq~\ref{eq:wave_eq} is a system with 6 equation; one for which field in each coordinate. The solution for this set of equation with boundary condition define the optical modes of our problem. To solve this equations we must apply consideration about symmetry; however we use numerical methods to solve it. We will use the commercial software COMSOL\regmark.
 %, in Appendix~\ref{app:Comsol_Solution} we explained step by step how this solutions are done. 
 
-Until now we have talk about generic electromagnetic modes, with no spatial boundary condition, in order to define them we must define the geometry of our cavity. Our device are based in disk microcavities, as show in Fig~\subref{fig:wgm}{a}, this kind of resonator presents the so called Whispering Gallery Modes (WGM), due to cylindrical symmetry. In order to archive high life time of the photons inside the cavity we use a wedge cavity. Fig~\subref{fig:wgm}{b} show a photo take using a Scanning Electron Microscope (SEM) of the cavity used in this study, the angle present at edge makes the electric field to be less perpendicular to the surface leading to lower loss due to scattering\needcit. The fabrication process have a important role in here, as we shall see below. 
+Until now we have talk about generic electromagnetic modes, with no spatial boundary condition, in order to define them we must define the geometry of our cavity. Our device are based in disk microcavities, as show in Fig~\subref{fig:wgm}{a}, this kind of resonator presents the so called Whispering Gallery Modes (WGM), due to cylindrical symmetry. In order to archive high life time of the photons inside the cavity we use a wedge cavity. Fig~\subref{fig:wgm}{b} show a photo take using a Scanning Electron Microscope (SEM) of the cavity used in this study, the angle present at edge makes the electric field to be more parallel to the surface leading to lower loss due to scattering\cite{Lee2012}. The fabrication process have a important role in here, as we shall see below in Chapter~\ref{chap:4_fabrication}. 
 
 The boundary condition lead to the characteristic equation in the form 
 \begin{equation}
     F(k_r,k_\theta,k_z,\omega) = 0.
     \label{eq:char_eq}
 \end{equation}
-The solution of this equation in function of the frequency $\omega$ give us the dispersion. 
+The solution of this equation as a function of the frequency $\omega$ give us the dispersion. 
 
-The set of constants, $k_r,k_\theta,k_z$, that solve this equation define a mode. As the mode is confined in a region, we can correlate this constants, that can assume any complex value, to integer with spatial representation.
-
-The WGM are labeled in the format TExy and TMxy modes, where x and y are integer correlated with $k_r$ and $k_z$, respectively. Beside that, given a TExy (TMxy) mode it can have several values of $m$, which is a integer correlated with $k_\theta$, it also define the family of the mode. The value of x,y and $m$ can be interpreted as the number of antinodes in the intensity of the electric field in each coordinate as defined in the Fig~\subref{fig:wgm}{c}. Just to clarify the nomenclature adopted in this dissertation, henceforward the term '$\alpha$th mode' are applied for a TExy or TMxy mode with any value of $m$. 
+The set of constants, $k_r,k_\theta,k_z$, that solve this equation define a mode. This constants can assume any complex value, which would hamper the nomenclature of the modes; fortunately, due to the confinement of the mode, we can correlate this constants with a integer number. The WGM are labeled in the format TExy and TMxy modes, where x and y are integers correlated with $k_r$ and $k_z$, respectively. Beside that, given a TExy (TMxy) mode it can have several values of $m$, which is a integer correlated with $k_\theta$, it also define the family of the mode. The value of x,y and $m$ can be interpreted as the number of antinodes in the intensity of the electric field in each coordinate as defined in the Fig~\subref{fig:wgm}{c}. To clarify the nomenclature adopted in this dissertation, henceforward the term '$\alpha$th mode' are applied for a TExy or TMxy mode with any value of $m$. 
 
 The solution of the Eq~\ref{eq:char_eq} give rise to the dispersion of the cavity. As the Round Trip Time depend on the group velocity, it can be extracted from the dispersion by the relation
 \begin{equation}
@@ -182,9 +175,9 @@ Now we have enough knowledge to understand how to experimentally characterize ou
 \section{Optical Characterization}
 \label{sec:optical_char}
 
-The mainly parameters of relevance to characterize an optical mode is the losses, which is done be measuring the transmission and compare with the Eq~\ref{eq:single_mode_transmission} from the single mode model. 
+The main relevant parameters to characterize an optical mode are the losses and the resonance frequency, which is done be measuring the transmission and compare with the Eq~\ref{eq:single_mode_transmission} from the single mode model. 
 
-The experiment is made using the setup showed in the  Fig~\ref{fig:exp_mode_charac}a; A laser with tunable frequency are applied as source, a piezo tunes the size of the external cavity leading to a few GHz of modulation. A small part of the output light are directed to a frequency calibrator compound of a Mach Zehnder interferometer and a wavelength reference Hydrogen Cyanide (HCN) cell. An attenuator control the input power in the cavity. The polarization of the input wave are controlled using a manual fiber polarization control. We use a tapered optical fiber to couple the source with the cavity. The transmission are measured using a power meter and the data are acquired using a DAQ. 
+The experiment is made using the setup showed in the  Fig~\ref{fig:exp_mode_charac}a; A laser with tunable frequency are applied as source, a piezo tunes the size of the external cavity leading to a few GHz of modulation. A small part of the output light are directed to a frequency calibrator compound of a Mach Zehnder interferometer and a wavelength reference Hydrogen Cyanide (HCN) cell. An attenuator controls the input power in the cavity. The polarization of the input wave are controlled using a manual fiber polarization control. We use a tapered optical fiber to couple the source with the cavity. The transmission are measured using a power meter and the data are acquired using a DAQ. 
 \begin{figure}[h!]
     \centering
     \includegraphics[width = 16cm]{figuras/Dissertation_optical_char_exp.jpg}
@@ -192,15 +185,16 @@ The experiment is made using the setup showed in the  Fig~\ref{fig:exp_mode_char
     \label{fig:exp_mode_charac}
 \end{figure}
 
-The result, for a single mode, are presented in the Fig~\ref{fig:exp_mode_charac}b). We use the Eq~\ref{eq:single_mode_transmission} to fit the data giving the values of $300$ MHz and $50$ MHz for the $\kappa_\alpha^{(i)}$ and $\kappa_\alpha^{(e)}$, respectively. The mode are at frequency $\omega_\alpha = 2\pi\times195.25$ THz which give us a $Q \approx 2\times10^6$.
+The result, for a single mode, are presented in Fig~\ref{fig:exp_mode_charac}c). We use the Eq~\ref{eq:single_mode_transmission} to fit the data giving the values of $300$ MHz and $50$ MHz for the $\kappa_\alpha^{(i)}$ and $\kappa_\alpha^{(e)}$, respectively. The mode are at frequency $\omega_\alpha = 2\pi\times195.25$ THz which give us a $Q \approx 3\times10^6$.
 
 Using an stepper motor instead of the piezo it possible to modulate the frequency in few THz enabling us to measure different families of modes, as show in Fig~\ref{fig:exp_mode_charac}c). The spectral distance of a mode in consecutive families give the $FSR_\alpha$ for the $\alpha$ mode. Our cavities present an FSR around $300$ GHz, which have to due mostly with the radius of the device. 
 
-According with the Eq.~\ref{eq:finesse}, we reached a finesse of about $\mathcal{F} \approx 1000$. A device with this parameters enable to amplify the incoming power, due to photons recycling, about $1000$ times. If used a input power of $1$ W, we can reach the $1$ KW of circulating power mentioned at the begin of this Chapter. In general terms, it make our device a good platform to generate nonlinear effects. 
+According to Eq.~\ref{eq:finesse}, we reached a finesse of about $\mathcal{F} \approx 1000$. A device with this parameters enable to amplify the incoming power, due to photons recycling, about $1000$ times. If a input power of $1$~W is used, a total of 1 kW circulating power is reached as mentioned before. In general terms, it make our device a good platform to generate nonlinear effects. 
+%A Fraction of the losses are due the material absorption, when we are working with high intracavity power this absorption lead to a thermal effects called bistability. 
 
-A Fraction of the losses are due the material absorption, when we are working with high intracavity power this absorption lead to a thermal effects called bistability. 
 
 \section{Pump Bistability}
+\label{sec:bistability}
 
 The resonance frequency of the cavity are correlated with the refractive index of the material, which is a function of the temperature. Treating this as a perturbation problem, we can write 
 
@@ -212,7 +206,7 @@ The resonance frequency of the cavity are correlated with the refractive index o
         \label{eq:termooptc_change}
     \end{alignat}
 \end{subequations}
-Where $T$ are the temperature of the optical mode. In a good approximation, considering a small variation in the temperature, we can write
+$T$ is the temperature of the optical mode. In a good approximation, considering a small variation in the temperature, we can write
 \begin{equation}
     \Delta \text{n}(T) = \frac{d\text{n}}{dT}\Delta T
 \end{equation}
@@ -227,7 +221,7 @@ Including the contribution in the rate equation Eq~\ref{eq:rate_equation2} after
 \dot{a}_\alpha = -\left(i\Delta_\alpha + i\omega_\alpha A|a_\alpha|^2 + \frac{\kappa_\alpha}{2}\right)a_\alpha + \sqrt{\kappa^{(e)}_\alpha}S_{in}
 \label{eq:rate_equation_bistable}
 \end{equation}
-The new term $A$ is called the of self phase modulation (SFM),
+The new term $A$ receives the name of self phase modulation (SFM), it represents how much the intensity of the optical mode affects the resonance frequency.
 
 As usual, we looking to the steady state solution. Depending on the $\Delta$ value, this equation can present three different solutions. To visualize it, lets write the Eq~\ref{eq:rate_equation_bistable} as 
 \begin{equation}
@@ -240,18 +234,23 @@ Controlling the input power using the attenuator, as showed in the setup of the 
 
 As the pump frequency get closer to the resonance frequency, the intracavity power increases, which shifts the resonance to the red through self-phase modulation, until the pump frequency, $\omega$, reaches the resonance frequency, $\omega_\alpha$; at this point, the effective detuning is zero and the energy stored in the cavity it's maximum.  
 
-As the amplitude is normalize in such way that $|a_\alpha|^2$ is the energy storage in the cavity, hence is proportional to the intensity of the electric field, the effect felt by the cavity due to the Eq~\ref{eq:pertubation_bistaliti_cavity} is similar to the Kerr effect presented in the Eq~\ref{eq:kerr_effect_free_wave}, in fact, in some conditions the both effects are indistinguishable\needcit. For that reason both effects, bistability thermal and Kerr, will all be included in the same term of the rate equation~\ref{eq:rate_equation_bistable}.
-\begin{figure}[h]
+\begin{figure}[t]
     \centering
     \includegraphics[width = 16cm]{Dissertation_bistabilite.jpg}
     \caption{\textbf{a) Numerical Method:} The Yellow curve are the identity function and represents the left side of the bistable rate equation. The curves Red and Blue are the right side of the equation with $\Delta_\alpha$ equal $1\times\kappa_\alpha$ and $-4\times\kappa_\alpha$, respectively, both with $|S_{in}|^2 = 1$. The Green curve have $\Delta_\alpha = -4\times\kappa_\alpha$, but $|S_{in}|^2 = 0.5$. \textbf{b) Bistable Transmission:} The Green and the Blue curves are the stable solution of the rate equation, this curve is well know as a bistable system. The dashed Orange is the unstable solution. The Dashed Gray is the same optical mode out of the regime of bistability. \textbf{c) Experimental Results:} Measuring the losses of the cavity out of the bistable regime, showed in Blue, is possible to measured the Phase Modulation using the frequency shifty due to the bistability. here we have $A_{I} = 5.7\times10^{7}$~J and $A_{II} = 3.2\times10^{6}$~J}
     \label{fig:bistable}
 \end{figure}
 
+As the amplitude is normalize in such way that $|a_\alpha|^2$ is the energy storage in the cavity, hence is proportional to the intensity of the electric field, the effect felt by the cavity due to the Eq~\ref{eq:pertubation_bistaliti_cavity} is similar to the Kerr effect presented in the Eq~\ref{eq:kerr_effect_free_wave}. The main difference between both is the time scale response, the Kerr effect is much faster than the thermal effect, in the right conditions both effects are indistinguishable~\cite{Braginsky89}. As the experiment was done slowly enough the thermal and Kerr bistability was included in the same term on the rate equation~\ref{eq:rate_equation_bistable}.
+
 The bistability plays an important role in harmonic generation in optical cavity. Further this role will by better understood.  
 
 \section{Conclusion}
 
-As mentioned before, the fabrication of the cavity plays a important role in this study. The fallowing Chapter shall treat of the process of fabrication. 
+Confine light in a small region using optical cavities is a effective tool to study nonlinear effects~\cite{Li18}. We dedicated this Chapter to describe mathematically the dynamic of the resonant optical modes.
 
+Initially we describe in Sec.~\ref{sec:single_mode} the single mode theory for both  components, the temporal using Input/Output description and spatial assuming slowly varying envelop. This description will be of huge importance in the Couple Mode theory on Chapter~\ref{chap:5_couple_mode}. We have defined the $Q$ factor as the parameter that describe the efficiency in recycle photon inside the cavity; although it is proportional with the distance of round trip of the photon, in microcavities both can't be treated apart. In Sec.~\ref{sec:optical_char} we applied the theory to characterize a device, find a maximum $Q$ factor of $3\times10^6$ with a $FSR$ of $300$~GHz, which lead to a Finesse of $1000$. 
 
+Even know that our device have a great potential to amplify the intracavity power, a large input power is still required to observe nonlinear effects, which lead to the Bistability described in  Sec~\ref{sec:bistability}, in Chapter~\ref{chap:5_couple_mode} we will understand how this affect the Third Harmonic Generation.
+
+An important segment of this project is the fabrication of the cavity. Our device was fabricated in Silicon Oxide because it do not have second order nonlinearity and presents a small optical absorption in both bands, infrared and visible; however, the fabrication of devices with the thickness that we are interested is a challenge using CMOS/MEMS technology~\cite{Qu16, Liu15}. The following Chapter will treat specifically of the fabrication. 
